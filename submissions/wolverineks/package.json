@@ -9,9 +9,11 @@
     "start": "webpack-dev-server",
     "lint": "eslint --fix ./src --ext='jsx' --ext='js'",
     "test": "yarn lint",
-    "precommit": "yarn test"
+    "precommit": "yarn test",
+    "build": "webpack ./src/index.jsx ./index.html"
   },
   "dependencies": {
+    "global": "^4.3.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
