@@ -8,8 +8,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "lint": "eslint --fix ./src --ext='jsx' --ext='js'",
-    "flow": "flow",
-    "test": "yarn run lint && yarn run flow",
+    "test": "yarn lint",
     "precommit": "yarn test"
   },
   "dependencies": {
