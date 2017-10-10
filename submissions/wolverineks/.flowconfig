@@ -6,5 +6,9 @@
 [libs]
 
 [lints]
+all=error
 
 [options]
+
+[version]
+0.56.0
