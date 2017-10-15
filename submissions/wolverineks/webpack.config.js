@@ -7,20 +7,21 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 })
 
 module.exports = {
+  devtool: 'source-map',
   entry: './src/index.jsx',
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
-      {
-        test: /\.jsx?$/, // Match both .js and .jsx files
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {presets: ['react']}
+    loaders: [{
+      test: /\.js(x)$/, // Match both .js and .jsx files
+      exclude: /node_modules/,
+      loader: 'babel-loader',
+      query: {
+        presets: ['react']
       }
-    ]
+    }]
   },
   plugins: [HtmlWebpackPluginConfig]
 }
