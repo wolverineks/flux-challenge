@@ -3,8 +3,10 @@ import React, {
   Component
 } from 'react'
 
-import type * as Types from '../Types'
-type Props = {className: Types.ClassName}
+import type {
+  ClassName
+} from '../../Types'
+type Props = {className: ClassName}
 type State = {}
 
 export default class Button extends Component<Props, State> {

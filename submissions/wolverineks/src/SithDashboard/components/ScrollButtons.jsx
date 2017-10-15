@@ -3,10 +3,14 @@ import React, {
   Component
 } from 'react'
 
-import type * as Types from '../Types'
+import type {
+  ClassName,
+  Children
+} from '../../Types'
+
 type Props = {
-  className: Types.ClassName,
-  children: Types.Children
+  className: ClassName,
+  children: Children
 }
 type State = {}
 

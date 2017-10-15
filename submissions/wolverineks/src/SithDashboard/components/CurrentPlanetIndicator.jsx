@@ -3,19 +3,30 @@ import React, {
   Component
 } from 'react'
 
-import type * as Types from '../Types'
+import type {
+  ClassName,
+  Planet
+} from '../../Types'
+
 type Props = {
-  className: Types.ClassName,
-  planet: Types.Planet
+  className: ClassName,
+  planet: ?Planet
 }
+
 type State = {}
 
 const OBI_WAN_TEXT = 'Obi-Wan currently on'
 
 export default class CurrentPlanetIndicator extends Component<Props, State> {
   render () {
-    const {className, planet} = this.props
-    const currentPlanetText = `${OBI_WAN_TEXT} ${planet}`
+    const {
+      className,
+      planet
+    } = this.props
+    const currentPlanetText = planet
+      ? `${OBI_WAN_TEXT} ${planet.name}`
+      : undefined
+
     return <h1 className={className}>
       {currentPlanetText}
     </h1>
