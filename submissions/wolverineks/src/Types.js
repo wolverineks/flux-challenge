@@ -1,17 +1,24 @@
+// Types.js
 // @flow
-export type Children = Array<any>
+
+import type {Node} from 'react'
+
+export type Children = Array<Node>
 export type ClassName = string
 
 export type Siths = Array<Sith>
 export type Sith = {
-  id: number,
+  id: Id,
   name: Name,
   homeworld: Planet,
-  master: number | null,
-  apprentice: number | null
+  master: Id | null,
+  apprentice: Id | null
 }
-export type Name = string
+
 export type Planet = {
-  id: number,
-  name: string
+  id: Id,
+  name: Name
 }
+
+export type Name = string
+export type Id = number
