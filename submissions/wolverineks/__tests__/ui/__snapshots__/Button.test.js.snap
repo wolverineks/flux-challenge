@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button When up button Button 1`] = `
+<button
+  className="css-button-down"
+  onPress={undefined}
+/>
+`;

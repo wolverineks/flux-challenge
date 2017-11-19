@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item When has contents Item 1`] = `
+<li
+  className="css-slot"
+>
+  <div>
+    test
+  </div>
+</li>
+`;

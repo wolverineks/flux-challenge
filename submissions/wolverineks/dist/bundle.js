@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 37);
+/******/ 	return __webpack_require__(__webpack_require__.s = 39);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -261,9 +261,9 @@ process.umask = function() { return 0; };
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(38);
+  module.exports = __webpack_require__(40);
 } else {
-  module.exports = __webpack_require__(39);
+  module.exports = __webpack_require__(41);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -380,18 +380,32 @@ module.exports = invariant;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// SithDashboard/styles.js
-var classNames = exports.classNames = {
-  main: 'app-container',
-  mainInner: 'css-root',
-  currentPlanetIndicator: 'css-planet-monitor',
-  scrollableList: 'css-scrollable-list',
-  sithList: 'css-slots',
-  sith: 'css-slot',
-  scrollButtons: 'css-scroll-buttons',
-  buttonUp: 'css-button-up',
-  buttonDown: 'css-button-down'
-};
+exports.classNames = exports.Item = exports.List = exports.Button = exports.ScrollButtons = exports.ScrollableList = exports.Sith = exports.Planet = exports.Body = exports.Header = exports.SithDashboard = undefined;
+
+var _SithDashboard = __webpack_require__(34);
+
+var _SithDashboard2 = _interopRequireDefault(_SithDashboard);
+
+var _components = __webpack_require__(35);
+
+var _styles = __webpack_require__(95);
+
+var _styles2 = _interopRequireDefault(_styles);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.SithDashboard = _SithDashboard2.default;
+exports.Header = _components.Header;
+exports.Body = _components.Body;
+exports.Planet = _components.Planet;
+exports.Sith = _components.Sith;
+exports.ScrollableList = _components.ScrollableList;
+exports.ScrollButtons = _components.ScrollButtons;
+exports.Button = _components.Button;
+exports.List = _components.List;
+exports.Item = _components.Item;
+exports.classNames = _styles2.default;
+exports.default = _SithDashboard2.default;
 
 /***/ }),
 /* 5 */
@@ -589,39 +603,61 @@ module.exports = warning;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(26);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return __WEBPACK_IMPORTED_MODULE_4__compose__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(59);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
 
 
 
 
 
-
-
-/*
-* This is a dummy function to check if the function name has been altered by minification.
-* If the function has been minified and NODE_ENV !== 'production', warn the user.
-*/
-function isCrushed() {}
-
-if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
-  Object(__WEBPACK_IMPORTED_MODULE_5__utils_warning__["a" /* default */])('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
-}
-
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.selectors = undefined;
+
+var _selectors = __webpack_require__(83);
+
+Object.defineProperty(exports, 'selectors', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_selectors).default;
+  }
+});
+
+var _reduxKeto = __webpack_require__(84);
+
+var _planet = __webpack_require__(85);
+
+var _planet2 = _interopRequireDefault(_planet);
+
+var _siths = __webpack_require__(86);
+
+var _siths2 = _interopRequireDefault(_siths);
+
+var _list = __webpack_require__(87);
+
+var _list2 = _interopRequireDefault(_list);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _reduxKeto.buildReducer)({ planet: _planet2.default, siths: _siths2.default, list: _list2.default });
+// export default combineReducers({planet, siths, list})
+
+/***/ }),
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -637,7 +673,7 @@ if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' 
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(3);
   var warning = __webpack_require__(7);
-  var ReactPropTypesSecret = __webpack_require__(10);
+  var ReactPropTypesSecret = __webpack_require__(11);
   var loggedTypeFailures = {};
 }
 
@@ -688,7 +724,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -707,7 +743,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -746,7 +782,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/**
@@ -771,17 +807,17 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(51)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(53)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(52)();
+  module.exports = __webpack_require__(54)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -809,13 +845,13 @@ function warning(message) {
 }
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(69);
 
 
 
@@ -881,7 +917,7 @@ function isPlainObject(value) {
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 var g;
@@ -908,7 +944,982 @@ module.exports = g;
 
 
 /***/ }),
-/* 16 */
+/* 17 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stopUpdates", function() { return stopUpdates; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "catchPixieError", function() { return catchPixieError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reflectPixieOutput", function() { return reflectPixieOutput; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tamePixie", function() { return tamePixie; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isPixieShutdownError", function() { return isPixieShutdownError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "attachPixie", function() { return attachPixie; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "startPixie", function() { return startPixie; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "combinePixies", function() { return combinePixies; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterPixie", function() { return filterPixie; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapPixie", function() { return mapPixie; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Pixie", function() { return Pixie; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tameClassPixie", function() { return tameClassPixie; });
+function makePixieShutdownError() {
+  var e = new Error('Pixie has been destroyed');
+  e.name = 'PixieShutdownError';
+  return e;
+}
+
+
+function isPixieShutdownError(e) {
+  return e instanceof Error && e.name === 'PixieShutdownError';
+}
+
+/**
+ * If a wild pixie returns a bare function, turn that into a proper object.
+ */
+function fixInstance(instance) {
+  if (typeof instance === 'function') {
+    return { update: instance, destroy: function destroy() {}
+    };
+  }
+  return instance;
+}
+
+/**
+ * Catches synchronous errors and sends them through `onError`,
+ * terminating the inner pixie in response. Also prevents `update`
+ * from running in parallel if if returns a promise.
+ */
+function babysitPixie(wildPixie) {
+  function outPixie(input) {
+    var instance = void 0;
+    var propsCache = void 0;
+    var propsDirty = true;
+    var updating = false;
+    var destroyed = false;
+    var nextPromise = void 0;
+    var rejector = void 0;
+    var resolver = void 0;
+
+    function destroy() {
+      if (instance) {
+        try {
+          if (rejector) {
+            var _copy = rejector;
+            nextPromise = void 0;
+            rejector = void 0;
+            resolver = void 0;
+            _copy(makePixieShutdownError());
+          }
+          var copy = instance;
+          instance = void 0;
+          copy.destroy();
+        } catch (e) {
+          onError(e);
+        }
+        destroyed = true;
+      }
+    }
+
+    // Ignore any callbacks once `destroy` has completed:
+    function onError(e) {
+      if (!destroyed) input.onError(e);
+      destroy();
+    }
+
+    function onOutput(data) {
+      if (!destroyed) input.onOutput(data);
+    }
+
+    function onUpdateDone() {
+      updating = false;
+      tryUpdate();
+    }
+
+    function tryUpdate() {
+      // eslint-disable-next-line no-unmodified-loop-condition
+      while (instance && propsDirty && !updating) {
+        propsDirty = false;
+        updating = true;
+
+        try {
+          var thenable = instance.update(propsCache);
+          if (thenable && typeof thenable.then === 'function') {
+            thenable.then(onUpdateDone, onError);
+          } else {
+            updating = false;
+          }
+        } catch (e) {
+          onError(e);
+        }
+      }
+    }
+
+    function getNextPromise() {
+      if (!nextPromise) {
+        nextPromise = new Promise(function (resolve, reject) {
+          resolver = resolve;
+          rejector = reject;
+        });
+      }
+      return nextPromise;
+    }
+
+    var childInput = {
+      onError: onError,
+      onOutput: onOutput,
+      get props() {
+        return propsCache;
+      },
+      nextProps: getNextPromise,
+      waitFor: function waitFor(condition) {
+        return new Promise(function (resolve, reject) {
+          function checkProps(props) {
+            var result = condition(props);
+            if (result != null) resolve(result);else getNextPromise().then(checkProps, reject);
+          }
+          return checkProps(propsCache);
+        });
+      }
+    };
+    try {
+      instance = fixInstance(wildPixie(childInput));
+    } catch (e) {
+      onError(e);
+    }
+
+    return {
+      update: function update(props) {
+        propsCache = props;
+        propsDirty = true;
+
+        // Update the `nextProps` promise right away:
+        if (resolver) {
+          var copy = resolver;
+          nextPromise = void 0;
+          rejector = void 0;
+          resolver = void 0;
+          copy(props);
+        }
+
+        tryUpdate();
+      },
+
+
+      destroy: destroy
+    };
+  }
+  outPixie.tame = true;
+  outPixie.defaultOutput = wildPixie.defaultOutput;
+  return outPixie;
+}
+
+/**
+ * Accepts a hand-written reducer, and hardens it with error checking.
+ */
+function tamePixie(pixie) {
+  return pixie.tame ? pixie : babysitPixie(pixie);
+}
+
+function defaultErrorHandler(e, props, onError) {
+  onError(e);
+}
+
+/**
+ * Intercepts `onError`, shutting down the inner pixie.
+ */
+function catchPixieError(pixie) {
+  var errorHandler = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultErrorHandler;
+
+  var tamedPixie = tamePixie(pixie);
+
+  function outPixie(input) {
+    var onOutput = input.onOutput;
+
+    var instance = void 0;
+    var propsCache = void 0;
+
+    var destroy = function destroy() {
+      var copy = instance;
+      instance = void 0;
+      if (copy) copy.destroy();
+    };
+
+    function onError(e) {
+      destroy();
+      try {
+        errorHandler(e, propsCache, input.onError);
+      } catch (e) {
+        input.onError(e);
+      }
+    }
+
+    var childInput = { onError: onError, onOutput: onOutput };
+
+    return {
+      update: function update(props) {
+        propsCache = props;
+        if (!instance) instance = tamedPixie(childInput);
+        instance.update(props);
+      },
+
+
+      destroy: destroy
+    };
+  }
+  outPixie.tame = true;
+  outPixie.defaultOutput = pixie.defaultOutput;
+  return outPixie;
+}
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
+  return typeof obj;
+} : function (obj) {
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+};
+
+
+
+
+
+var asyncGenerator = function () {
+  function AwaitValue(value) {
+    this.value = value;
+  }
+
+  function AsyncGenerator(gen) {
+    var front, back;
+
+    function send(key, arg) {
+      return new Promise(function (resolve, reject) {
+        var request = {
+          key: key,
+          arg: arg,
+          resolve: resolve,
+          reject: reject,
+          next: null
+        };
+
+        if (back) {
+          back = back.next = request;
+        } else {
+          front = back = request;
+          resume(key, arg);
+        }
+      });
+    }
+
+    function resume(key, arg) {
+      try {
+        var result = gen[key](arg);
+        var value = result.value;
+
+        if (value instanceof AwaitValue) {
+          Promise.resolve(value.value).then(function (arg) {
+            resume("next", arg);
+          }, function (arg) {
+            resume("throw", arg);
+          });
+        } else {
+          settle(result.done ? "return" : "normal", result.value);
+        }
+      } catch (err) {
+        settle("throw", err);
+      }
+    }
+
+    function settle(type, value) {
+      switch (type) {
+        case "return":
+          front.resolve({
+            value: value,
+            done: true
+          });
+          break;
+
+        case "throw":
+          front.reject(value);
+          break;
+
+        default:
+          front.resolve({
+            value: value,
+            done: false
+          });
+          break;
+      }
+
+      front = front.next;
+
+      if (front) {
+        resume(front.key, front.arg);
+      } else {
+        back = null;
+      }
+    }
+
+    this._invoke = send;
+
+    if (typeof gen.return !== "function") {
+      this.return = undefined;
+    }
+  }
+
+  if (typeof Symbol === "function" && Symbol.asyncIterator) {
+    AsyncGenerator.prototype[Symbol.asyncIterator] = function () {
+      return this;
+    };
+  }
+
+  AsyncGenerator.prototype.next = function (arg) {
+    return this._invoke("next", arg);
+  };
+
+  AsyncGenerator.prototype.throw = function (arg) {
+    return this._invoke("throw", arg);
+  };
+
+  AsyncGenerator.prototype.return = function (arg) {
+    return this._invoke("return", arg);
+  };
+
+  return {
+    wrap: function (fn) {
+      return function () {
+        return new AsyncGenerator(fn.apply(this, arguments));
+      };
+    },
+    await: function (value) {
+      return new AwaitValue(value);
+    }
+  };
+}();
+
+
+
+
+
+var classCallCheck = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
+
+var createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+
+
+
+
+
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+/**
+ * Copies the `output` back into the pixie as a prop.
+ */
+
+function reflectPixieOutput(pixie) {
+  var tamedPixie = tamePixie(pixie);
+
+  function outPixie(input) {
+    var onError = input.onError;
+
+    var instance = void 0;
+    var output = pixie.defaultOutput;
+    var propsCache = void 0;
+    var propsDirty = true;
+    var updating = false;
+
+    var tryUpdate = function tryUpdate() {
+      // The `update` function can call `onOutput` or `onError`, so loop:
+      // eslint-disable-next-line no-unmodified-loop-condition
+      while (instance && propsDirty && !updating) {
+        propsDirty = false;
+        updating = true;
+        instance.update(_extends({}, propsCache, { output: output }));
+        updating = false;
+      }
+    };
+
+    var onOutput = function onOutput(data) {
+      if (data !== output) {
+        output = data;
+        propsDirty = true;
+        input.onOutput(data);
+        tryUpdate();
+      }
+    };
+
+    var childInput = { onError: onError, onOutput: onOutput };
+    return {
+      update: function update(props) {
+        propsCache = props;
+        propsDirty = true;
+        if (!instance) instance = tamedPixie(childInput);
+        tryUpdate();
+      },
+      destroy: function destroy() {
+        var copy = instance;
+        instance = void 0;
+        if (copy) copy.destroy();
+      }
+    };
+  }
+  outPixie.tame = true;
+  outPixie.defaultOutput = pixie.defaultOutput;
+  return outPixie;
+}
+
+function defaultOnError(e) {}
+function defaultOnOutput(data) {}
+
+/**
+ * Instantiates a pixie object.
+ */
+function startPixie(pixie) {
+  var onError = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultOnError;
+  var onOutput = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : defaultOnOutput;
+
+  return catchPixieError(reflectPixieOutput(pixie))({ onError: onError, onOutput: onOutput });
+}
+
+/**
+ * Instantiates a pixie object and attaches it to a redux store.
+ */
+function attachPixie(store, pixie, onError, onOutput) {
+  var instance = startPixie(pixie, onError, onOutput);
+  instance.update({
+    dispatch: store.dispatch,
+    output: void 0,
+    state: store.getState()
+  });
+
+  var unsubscribe = store.subscribe(function () {
+    instance.update({
+      dispatch: store.dispatch,
+      output: void 0,
+      state: store.getState()
+    });
+  });
+
+  return function () {
+    unsubscribe();
+    instance.destroy();
+  };
+}
+
+/**
+ * Combines one or more pixies into one.
+ */
+function combinePixies(pixieMap) {
+  var defaultOutput = {};
+  for (var _iterator = Object.keys(pixieMap), _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
+    var _ref;
+
+    if (_isArray) {
+      if (_i >= _iterator.length) break;
+      _ref = _iterator[_i++];
+    } else {
+      _i = _iterator.next();
+      if (_i.done) break;
+      _ref = _i.value;
+    }
+
+    var _id3 = _ref;
+
+    defaultOutput[_id3] = pixieMap[_id3].defaultOutput;
+  }
+
+  function outPixie(input) {
+    var onError = input.onError;
+
+    var childInputs = {};
+    var instances = {};
+    var outputs = _extends({}, defaultOutput);
+    var destroyed = false;
+
+    var _loop = function _loop() {
+      if (_isArray2) {
+        if (_i2 >= _iterator2.length) return 'break';
+        _ref2 = _iterator2[_i2++];
+      } else {
+        _i2 = _iterator2.next();
+        if (_i2.done) return 'break';
+        _ref2 = _i2.value;
+      }
+
+      var id = _ref2;
+
+      var onOutput = function onOutput(data) {
+        if (data !== outputs[id]) {
+          outputs = _extends({}, outputs);
+          outputs[id] = data;
+          input.onOutput(outputs);
+        }
+      };
+      childInputs[id] = { onError: onError, onOutput: onOutput };
+      instances[id] = tamePixie(pixieMap[id])(childInputs[id]);
+      if (destroyed) return 'break';
+    };
+
+    for (var _iterator2 = Object.keys(pixieMap), _isArray2 = Array.isArray(_iterator2), _i2 = 0, _iterator2 = _isArray2 ? _iterator2 : _iterator2[Symbol.iterator]();;) {
+      var _ref2;
+
+      var _ret = _loop();
+
+      if (_ret === 'break') break;
+    }
+
+    return {
+      update: function update(props) {
+        for (var _iterator3 = Object.keys(instances), _isArray3 = Array.isArray(_iterator3), _i3 = 0, _iterator3 = _isArray3 ? _iterator3 : _iterator3[Symbol.iterator]();;) {
+          var _ref3;
+
+          if (_isArray3) {
+            if (_i3 >= _iterator3.length) break;
+            _ref3 = _iterator3[_i3++];
+          } else {
+            _i3 = _iterator3.next();
+            if (_i3.done) break;
+            _ref3 = _i3.value;
+          }
+
+          var _id = _ref3;
+
+          instances[_id].update(props);
+          if (destroyed) return;
+        }
+      },
+      destroy: function destroy() {
+        destroyed = true;
+        for (var _iterator4 = Object.keys(instances), _isArray4 = Array.isArray(_iterator4), _i4 = 0, _iterator4 = _isArray4 ? _iterator4 : _iterator4[Symbol.iterator]();;) {
+          var _ref4;
+
+          if (_isArray4) {
+            if (_i4 >= _iterator4.length) break;
+            _ref4 = _iterator4[_i4++];
+          } else {
+            _i4 = _iterator4.next();
+            if (_i4.done) break;
+            _ref4 = _i4.value;
+          }
+
+          var _id2 = _ref4;
+
+          instances[_id2].destroy();
+        }
+      }
+    };
+  }
+  outPixie.tame = true;
+  outPixie.defaultOutput = defaultOutput;
+  return outPixie;
+}
+
+/**
+ * If the function throws, send that through `onError`.
+ */
+function catchify(f, onError) {
+  return function () {
+    try {
+      return f.apply(undefined, arguments);
+    } catch (e) {
+      onError(e);
+    }
+  };
+}
+
+/**
+ * Returns true if two Javascript values are equal (non-recursively).
+ */
+
+function shallowCompare(a, b) {
+  if (a === b) return true;
+
+  // Fast path for primitives:
+  if ((typeof a === 'undefined' ? 'undefined' : _typeof(a)) !== 'object') return false;
+  if ((typeof b === 'undefined' ? 'undefined' : _typeof(b)) !== 'object') return false;
+
+  // Filter out `null`:
+  if (!a || !b) return false;
+
+  var keys = Object.getOwnPropertyNames(a);
+  if (keys.length !== Object.getOwnPropertyNames(b).length) return false;
+
+  // We know that both objects have the same number of properties,
+  // so if every property in `a` has a matching property in `b`,
+  // the objects must be identical, regardless of key order.
+  for (var _iterator = keys, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
+    var _ref;
+
+    if (_isArray) {
+      if (_i >= _iterator.length) break;
+      _ref = _iterator[_i++];
+    } else {
+      _i = _iterator.next();
+      if (_i.done) break;
+      _ref = _i.value;
+    }
+
+    var key = _ref;
+
+    if (!b.hasOwnProperty(key) || a[key] !== b[key]) return false;
+  }
+  return true;
+}
+
+/**
+ * Filters the props going into a pixie.
+ */
+function filterPixie(pixie, filter) {
+  var tamedPixie = tamePixie(pixie);
+
+  function outPixie(input) {
+    var onError = input.onError,
+        onOutput = input.onOutput;
+
+    var instance = void 0;
+    var propsCache = void 0;
+    var destroyed = false;
+
+    var safeFilter = catchify(filter, onError);
+
+    var childInput = { onError: onError, onOutput: onOutput };
+
+    return {
+      update: function update(props) {
+        var innerProps = safeFilter(props);
+        if (destroyed) return;
+        var dirty = !shallowCompare(innerProps, propsCache);
+        propsCache = innerProps;
+
+        // Start or stop the instance:
+        if (innerProps) {
+          if (!instance) instance = tamedPixie(childInput);
+          if (destroyed) return;
+          if (dirty) instance.update(innerProps);
+        } else {
+          if (instance) instance.destroy();
+          instance = void 0;
+        }
+      },
+      destroy: function destroy() {
+        destroyed = true;
+        if (instance) instance.destroy();
+        instance = void 0;
+      }
+    };
+  }
+  outPixie.tame = true;
+  outPixie.defaultOutput = pixie.defaultOutput;
+  return outPixie;
+}
+
+/**
+ * Combines one or more pixies into one, using a list of keys.
+ */
+function mapPixie(pixie, listIds, filter) {
+  var tamedPixie = tamePixie(pixie);
+
+  function outPixie(input) {
+    var onError = input.onError;
+
+    var instances = {};
+    var outputs = {};
+    var outputsDirty = false;
+    var propsCache = {};
+    var updating = false;
+    var destroyed = false;
+
+    var safeListIds = catchify(listIds, onError);
+    var safeFilter = catchify(filter, onError);
+
+    var updateOutputs = function updateOutputs() {
+      if (outputsDirty && !updating) {
+        outputsDirty = false;
+        var newOutputs = {};
+        for (var _iterator = Object.keys(instances), _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
+          var _ref;
+
+          if (_isArray) {
+            if (_i >= _iterator.length) break;
+            _ref = _iterator[_i++];
+          } else {
+            _i = _iterator.next();
+            if (_i.done) break;
+            _ref = _i.value;
+          }
+
+          var _id = _ref;
+
+          newOutputs[_id] = outputs[_id];
+        }
+        outputs = newOutputs;
+        input.onOutput(outputs);
+      }
+    };
+
+    return {
+      update: function update(outerProps) {
+        var ids = safeListIds(outerProps);
+        if (destroyed || !ids) return;
+
+        // Update or create instances for all keys:
+        updating = true;
+        var newInstances = {};
+
+        var _loop = function _loop() {
+          if (_isArray2) {
+            if (_i2 >= _iterator2.length) return 'break';
+            _ref2 = _iterator2[_i2++];
+          } else {
+            _i2 = _iterator2.next();
+            if (_i2.done) return 'break';
+            _ref2 = _i2.value;
+          }
+
+          var id = _ref2;
+
+          var innerProps = safeFilter(outerProps, id);
+          if (destroyed) return {
+              v: void 0
+            };
+          var dirty = !shallowCompare(innerProps, propsCache[id]);
+          propsCache[id] = innerProps;
+
+          if (innerProps) {
+            if (!instances[id]) {
+              var onOutput = function onOutput(data) {
+                if (data !== outputs[id]) {
+                  outputs[id] = data;
+                  outputsDirty = true;
+                  updateOutputs();
+                }
+              };
+              instances[id] = tamedPixie({ onError: onError, onOutput: onOutput });
+              if (destroyed) return {
+                  v: void 0
+                };
+            }
+            if (dirty) instances[id].update(innerProps);
+            if (destroyed) return {
+                v: void 0
+              };
+            newInstances[id] = instances[id];
+          }
+        };
+
+        _loop2: for (var _iterator2 = ids, _isArray2 = Array.isArray(_iterator2), _i2 = 0, _iterator2 = _isArray2 ? _iterator2 : _iterator2[Symbol.iterator]();;) {
+          var _ref2;
+
+          var _ret = _loop();
+
+          switch (_ret) {
+            case 'break':
+              break _loop2;
+
+            default:
+              if ((typeof _ret === 'undefined' ? 'undefined' : _typeof(_ret)) === "object") return _ret.v;
+          }
+        }
+
+        // Swap out the instance list, removing unwanted pixies:
+
+
+        var oldInstances = instances;
+        instances = newInstances;
+
+        // Destroy any old instances that are not on the list.
+        // We need to finish this even if it triggers `destroyed`:
+        for (var _iterator3 = Object.keys(oldInstances), _isArray3 = Array.isArray(_iterator3), _i3 = 0, _iterator3 = _isArray3 ? _iterator3 : _iterator3[Symbol.iterator]();;) {
+          var _ref3;
+
+          if (_isArray3) {
+            if (_i3 >= _iterator3.length) break;
+            _ref3 = _iterator3[_i3++];
+          } else {
+            _i3 = _iterator3.next();
+            if (_i3.done) break;
+            _ref3 = _i3.value;
+          }
+
+          var _id2 = _ref3;
+
+          if (!newInstances[_id2]) oldInstances[_id2].destroy();
+        }
+        if (destroyed) return;
+
+        updating = false;
+        updateOutputs();
+      },
+      destroy: function destroy() {
+        destroyed = true;
+        for (var _iterator4 = Object.keys(instances), _isArray4 = Array.isArray(_iterator4), _i4 = 0, _iterator4 = _isArray4 ? _iterator4 : _iterator4[Symbol.iterator]();;) {
+          var _ref4;
+
+          if (_isArray4) {
+            if (_i4 >= _iterator4.length) break;
+            _ref4 = _iterator4[_i4++];
+          } else {
+            _i4 = _iterator4.next();
+            if (_i4.done) break;
+            _ref4 = _i4.value;
+          }
+
+          var _id3 = _ref4;
+
+          if (instances[_id3]) instances[_id3].destroy();
+        }
+      }
+    };
+  }
+  outPixie.tame = true;
+  outPixie.defaultOutput = {};
+  return outPixie;
+}
+
+/**
+ * Class-style pixies should inherit from this type.
+ */
+var Pixie = function () {
+  function Pixie(props, callbacks) {
+    classCallCheck(this, Pixie);
+
+    this.props = props;
+  }
+
+  /**
+   * Called every time the props change.
+   */
+
+
+  createClass(Pixie, [{
+    key: 'update',
+    value: function update(props, callbacks) {}
+
+    /**
+     * Called before the pixie is destroyed.
+     * This is a great place to clean up any resources.
+     */
+
+  }, {
+    key: 'destroy',
+    value: function destroy(props, callbacks) {}
+  }]);
+  return Pixie;
+}();
+
+/**
+ * Turns a class-style pixie into a tame pixie.
+ */
+function tameClassPixie(Constructor) {
+  return tamePixie(function (_ref) {
+    var onError = _ref.onError,
+        onOutput = _ref.onOutput;
+
+    var callbacks = { onError: onError, onOutput: onOutput };
+    var instance = void 0;
+    var propsCache = void 0;
+
+    return {
+      update: function update(props) {
+        propsCache = props;
+        if (!instance) {
+          instance = new Constructor(props, callbacks);
+        }
+        return instance.update(props, callbacks);
+      },
+      destroy: function destroy() {
+        return instance.destroy(propsCache, callbacks);
+      }
+    };
+  });
+}
+
+/**
+ * Update functions can return this to stop all future updates.
+ */
+var stopUpdates = {
+  then: function then() {}
+};
+
+
+//# sourceMappingURL=redux-pixies.es.js.map
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Renderer = function (_Component) {
+  _inherits(Renderer, _Component);
+
+  function Renderer() {
+    _classCallCheck(this, Renderer);
+
+    return _possibleConstructorReturn(this, (Renderer.__proto__ || Object.getPrototypeOf(Renderer)).apply(this, arguments));
+  }
+
+  _createClass(Renderer, [{
+    key: 'render',
+    value: function render() {
+      return this.props.render(_extends({}, this.props));
+    }
+  }]);
+
+  return Renderer;
+}(_react.Component);
+
+exports.default = Renderer;
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -989,7 +2000,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 17 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1060,7 +2071,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 18 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1075,7 +2086,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(42);
+var isTextNode = __webpack_require__(44);
 
 /*eslint-disable no-bitwise */
 
@@ -1103,7 +2114,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 19 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1133,7 +2144,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 20 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1175,32 +2186,13 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 21 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(57);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
-
-
-
-
-
-
-/***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return subscriptionShape; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return storeShape; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
 
 
@@ -1218,19 +2210,19 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 });
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = connectAdvanced;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(24);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1523,14 +2515,51 @@ selectorFactory) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 24 */
+/* 26 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__combineReducers__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__compose__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warning__ = __webpack_require__(29);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return __WEBPACK_IMPORTED_MODULE_0__createStore__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return __WEBPACK_IMPORTED_MODULE_1__combineReducers__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return __WEBPACK_IMPORTED_MODULE_2__bindActionCreators__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return __WEBPACK_IMPORTED_MODULE_3__applyMiddleware__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return __WEBPACK_IMPORTED_MODULE_4__compose__["a"]; });
+
+
+
+
+
+
+
+/*
+* This is a dummy function to check if the function name has been altered by minification.
+* If the function has been minified and NODE_ENV !== 'production', warn the user.
+*/
+function isCrushed() {}
+
+if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
+  Object(__WEBPACK_IMPORTED_MODULE_5__utils_warning__["a" /* default */])('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
+}
+
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionTypes; });
 /* harmony export (immutable) */ __webpack_exports__["b"] = createStore;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_symbol_observable__);
 
 
@@ -1782,11 +2811,11 @@ var ActionTypes = {
 }
 
 /***/ }),
-/* 25 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(63);
 
 
 /** Built-in value references. */
@@ -1796,7 +2825,7 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 
 
 /***/ }),
-/* 26 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1824,7 +2853,7 @@ function warning(message) {
 }
 
 /***/ }),
-/* 27 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1863,14 +2892,14 @@ function compose() {
 }
 
 /***/ }),
-/* 28 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = wrapMapToPropsConstant;
 /* unused harmony export getDependsOnOwnProps */
 /* harmony export (immutable) */ __webpack_exports__["b"] = wrapMapToPropsFunc;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(32);
 
 
 function wrapMapToPropsConstant(getConstant) {
@@ -1941,13 +2970,13 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 29 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifyPlainObject;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(14);
 
 
 
@@ -1956,92 +2985,6 @@ function verifyPlainObject(value, displayName, methodName) {
     Object(__WEBPACK_IMPORTED_MODULE_1__warning__["a" /* default */])(methodName + '() in ' + displayName + ' must return a plain object. Instead received ' + value + '.');
   }
 }
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.selectors = exports.reducer = exports.Main = undefined;
-
-var _selectors = __webpack_require__(31);
-
-var _selectors2 = _interopRequireDefault(_selectors);
-
-var _reducer = __webpack_require__(82);
-
-var _reducer2 = _interopRequireDefault(_reducer);
-
-var _SithDashboard = __webpack_require__(36);
-
-var _SithDashboard2 = _interopRequireDefault(_SithDashboard);
-
-var _connector = __webpack_require__(96);
-
-var _connector2 = _interopRequireDefault(_connector);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// SithDashboard/index.js
-exports.Main = _SithDashboard2.default;
-exports.reducer = _reducer2.default;
-exports.selectors = _selectors2.default;
-exports.default = _connector2.default;
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var getPlanet = exports.getPlanet = function getPlanet(state) {
-  return state.planet;
-}; // SithDashboard/selectors.js
-
-
-var getSiths = exports.getSiths = function getSiths(state) {
-  return state.siths;
-};
-
-exports.default = {
-  getPlanet: getPlanet,
-  getSiths: getSiths
-};
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.reducer = exports.CurrentPlanetIndicator = undefined;
-
-var _CurrentPlanetIndicator = __webpack_require__(83);
-
-var _CurrentPlanetIndicator2 = _interopRequireDefault(_CurrentPlanetIndicator);
-
-var _reducer = __webpack_require__(86);
-
-var _reducer2 = _interopRequireDefault(_reducer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.CurrentPlanetIndicator = _CurrentPlanetIndicator2.default;
-exports.reducer = _reducer2.default;
-exports.default = _CurrentPlanetIndicator2.default;
 
 /***/ }),
 /* 33 */
@@ -2053,41 +2996,35 @@ exports.default = _CurrentPlanetIndicator2.default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.reducer = exports.ScrollButtons = exports.Button = exports.Item = exports.List = exports.ScrollableList = undefined;
 
-var _ScrollableList = __webpack_require__(87);
+var _List_ = __webpack_require__(90);
 
-var _ScrollableList2 = _interopRequireDefault(_ScrollableList);
+Object.defineProperty(exports, 'List_', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_List_).default;
+  }
+});
 
-var _List = __webpack_require__(88);
+var _Siths_ = __webpack_require__(91);
 
-var _List2 = _interopRequireDefault(_List);
+Object.defineProperty(exports, 'Siths_', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Siths_).default;
+  }
+});
 
-var _Item = __webpack_require__(34);
+var _Planet_ = __webpack_require__(92);
 
-var _Item2 = _interopRequireDefault(_Item);
-
-var _Button = __webpack_require__(35);
-
-var _Button2 = _interopRequireDefault(_Button);
-
-var _ScrollButtons = __webpack_require__(89);
-
-var _ScrollButtons2 = _interopRequireDefault(_ScrollButtons);
-
-var _reducer = __webpack_require__(90);
-
-var _reducer2 = _interopRequireDefault(_reducer);
+Object.defineProperty(exports, 'Planet_', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Planet_).default;
+  }
+});
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.ScrollableList = _ScrollableList2.default;
-exports.List = _List2.default;
-exports.Item = _Item2.default;
-exports.Button = _Button2.default;
-exports.ScrollButtons = _ScrollButtons2.default;
-exports.reducer = _reducer2.default;
-exports.default = _ScrollableList2.default;
 
 /***/ }),
 /* 34 */
@@ -2100,49 +3037,90 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styles = __webpack_require__(4);
+var _components = __webpack_require__(35);
+
+var _utils = __webpack_require__(107);
+
+var _ = __webpack_require__(4);
+
+__webpack_require__(108);
+
+var _connectors = __webpack_require__(33);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var SithDashboard = function SithDashboard(_ref) {
+  var siths = _ref.siths,
+      planet = _ref.planet;
+  return _react2.default.createElement(
+    'div',
+    { className: _.classNames.main },
+    _react2.default.createElement(
+      'div',
+      { className: _.classNames.mainInner },
+      _react2.default.createElement(
+        _components.Header,
+        null,
+        _react2.default.createElement(_components.Planet, { planet: planet })
+      ),
+      _react2.default.createElement(
+        _components.Body,
+        null,
+        _react2.default.createElement(_connectors.List_, { render: function render(list) {
+            _react2.default.createElement(_components.ScrollableList, { data: siths, render: function render() {
+                return _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(
+                    _components.List,
+                    { list: list },
+                    _react2.default.createElement(
+                      _components.Item,
+                      null,
+                      _react2.default.createElement(_components.Sith, { name: (0, _utils.name)(list[0]), homeworld: (0, _utils.homeworld)(list[0]) })
+                    ),
+                    _react2.default.createElement(
+                      _components.Item,
+                      null,
+                      _react2.default.createElement(_components.Sith, { name: (0, _utils.name)(list[1]), homeworld: (0, _utils.homeworld)(list[1]) })
+                    ),
+                    _react2.default.createElement(
+                      _components.Item,
+                      null,
+                      _react2.default.createElement(_components.Sith, { name: (0, _utils.name)(list[2]), homeworld: (0, _utils.homeworld)(list[2]) })
+                    ),
+                    _react2.default.createElement(
+                      _components.Item,
+                      null,
+                      _react2.default.createElement(_components.Sith, { name: (0, _utils.name)(list[3]), homeworld: (0, _utils.homeworld)(list[3]) })
+                    ),
+                    _react2.default.createElement(
+                      _components.Item,
+                      null,
+                      _react2.default.createElement(_components.Sith, { name: (0, _utils.name)(list[4]), homeworld: (0, _utils.homeworld)(list[4]) })
+                    )
+                  ),
+                  _react2.default.createElement(_components.ScrollButtons, { render: function render() {
+                      return _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(_components.Button, { direction: 'UP' }),
+                        _react2.default.createElement(_components.Button, { direction: 'DOWN' })
+                      );
+                    } })
+                );
+              } });
+          } })
+      )
+    )
+  );
+};
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // SithDashboard/components/ScrollableList/components/Iem.jsx
-
-
-var Item = function (_Component) {
-  _inherits(Item, _Component);
-
-  function Item() {
-    _classCallCheck(this, Item);
-
-    return _possibleConstructorReturn(this, (Item.__proto__ || Object.getPrototypeOf(Item)).apply(this, arguments));
-  }
-
-  _createClass(Item, [{
-    key: 'render',
-    value: function render() {
-      var children = this.props.children;
-
-      return _react2.default.createElement(
-        'li',
-        { className: _styles.classNames.sith },
-        _react2.default.Children.only(children)
-      );
-    }
-  }]);
-
-  return Item;
-}(_react.Component);
-
-exports.default = Item;
+exports.default = SithDashboard;
 
 /***/ }),
 /* 35 */
@@ -2155,47 +3133,76 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _ScrollableList = __webpack_require__(93);
 
-var _react = __webpack_require__(1);
+Object.defineProperty(exports, 'ScrollableList', {
+  enumerable: true,
+  get: function get() {
+    return _ScrollableList.ScrollableList;
+  }
+});
+Object.defineProperty(exports, 'List', {
+  enumerable: true,
+  get: function get() {
+    return _ScrollableList.List;
+  }
+});
+Object.defineProperty(exports, 'Item', {
+  enumerable: true,
+  get: function get() {
+    return _ScrollableList.Item;
+  }
+});
+Object.defineProperty(exports, 'ScrollButtons', {
+  enumerable: true,
+  get: function get() {
+    return _ScrollableList.ScrollButtons;
+  }
+});
+Object.defineProperty(exports, 'Button', {
+  enumerable: true,
+  get: function get() {
+    return _ScrollableList.Button;
+  }
+});
 
-var _react2 = _interopRequireDefault(_react);
+var _Planet = __webpack_require__(98);
 
-var _styles = __webpack_require__(4);
+Object.defineProperty(exports, 'Planet', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Planet).default;
+  }
+});
+
+var _Header = __webpack_require__(102);
+
+Object.defineProperty(exports, 'Header', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Header).default;
+  }
+});
+
+var _Body = __webpack_require__(103);
+
+Object.defineProperty(exports, 'Body', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Body).default;
+  }
+});
+
+var _Sith = __webpack_require__(104);
+
+Object.defineProperty(exports, 'Sith', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Sith).default;
+  }
+});
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // SithDashboard/components/Button.jsx
-
-
-var Button = function (_Component) {
-  _inherits(Button, _Component);
-
-  function Button() {
-    _classCallCheck(this, Button);
-
-    return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
-  }
-
-  _createClass(Button, [{
-    key: 'render',
-    value: function render() {
-      var direction = this.props.direction;
-
-
-      var className = direction === 'up' ? _styles.classNames.buttonUp : _styles.classNames.buttonDown;
-      return _react2.default.createElement('button', { className: className });
-    }
-  }]);
-
-  return Button;
-}(_react.Component);
-
-exports.default = Button;
 
 /***/ }),
 /* 36 */
@@ -2208,102 +3215,86 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ = __webpack_require__(4);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Item = function Item(_ref) {
+  var children = _ref.children;
+  return _react2.default.createElement(
+    'li',
+    { className: _.classNames.sith },
+    _react2.default.Children.only(children)
+  );
+};
+
+exports.default = Item;
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _components = __webpack_require__(91);
-
-var _styles = __webpack_require__(4);
-
-__webpack_require__(95);
+var _ = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var Button = function Button(_ref) {
+  var direction = _ref.direction,
+      onPress = _ref.onPress;
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+  var className = direction === 'UP' ? _.classNames.buttonUp : _.classNames.buttonDown;
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // SithDashboard/SithDashboard.jsx
+  return _react2.default.createElement('button', { className: className, onPress: onPress });
+};
 
-
-var SithDashboard = function (_Component) {
-  _inherits(SithDashboard, _Component);
-
-  function SithDashboard() {
-    _classCallCheck(this, SithDashboard);
-
-    return _possibleConstructorReturn(this, (SithDashboard.__proto__ || Object.getPrototypeOf(SithDashboard)).apply(this, arguments));
-  }
-
-  _createClass(SithDashboard, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          planet = _props.planet,
-          siths = _props.siths;
-
-
-      return _react2.default.createElement(
-        'div',
-        { className: _styles.classNames.main },
-        _react2.default.createElement(
-          'div',
-          { className: _styles.classNames.mainInner },
-          _react2.default.createElement(_components.CurrentPlanetIndicator, { planet: planet }),
-          _react2.default.createElement(
-            _components.ScrollableList,
-            null,
-            _react2.default.createElement(
-              _components.List,
-              null,
-              _react2.default.createElement(
-                _components.Item,
-                null,
-                _react2.default.createElement(_components.Sith, { name: siths[0] ? siths[0].name : undefined, homeworld: siths[0] ? siths[0].homeworld : undefined })
-              ),
-              _react2.default.createElement(
-                _components.Item,
-                null,
-                _react2.default.createElement(_components.Sith, { name: siths[1] ? siths[1].name : undefined, homeworld: siths[1] ? siths[1].homeworld : undefined })
-              ),
-              _react2.default.createElement(
-                _components.Item,
-                null,
-                _react2.default.createElement(_components.Sith, { name: siths[2] ? siths[2].name : undefined, homeworld: siths[2] ? siths[2].homeworld : undefined })
-              ),
-              _react2.default.createElement(
-                _components.Item,
-                null,
-                _react2.default.createElement(_components.Sith, { name: siths[3] ? siths[3].name : undefined, homeworld: siths[3] ? siths[3].homeworld : undefined })
-              ),
-              _react2.default.createElement(
-                _components.Item,
-                null,
-                _react2.default.createElement(_components.Sith, { name: siths[4] ? siths[4].name : undefined, homeworld: siths[4] ? siths[4].homeworld : undefined })
-              )
-            ),
-            _react2.default.createElement(
-              _components.ScrollButtons,
-              null,
-              _react2.default.createElement(_components.Button, { direction: 'up' }),
-              _react2.default.createElement(_components.Button, { direction: 'down' })
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return SithDashboard;
-}(_react.Component);
-
-exports.default = SithDashboard;
+exports.default = Button;
 
 /***/ }),
-/* 37 */
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var sithPixie = function sithPixie() {
+  return {
+    update: function update(props) {
+      var toJSON = function toJSON(response) {
+        return response.json();
+      };
+      var dispatch = function dispatch(sith) {
+        return props.dispatch({ type: 'SITH_RECEIVED', sith: sith });
+      };
+      props.dispatch({ type: 'SITH_REQUESTED', id: props.id });
+
+      fetch(props.url).then(toJSON).then(dispatch);
+    },
+    destroy: function destroy() {}
+  };
+};
+
+exports.default = sithPixie;
+
+/***/ }),
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2313,30 +3304,40 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(40);
+var _reactDom = __webpack_require__(42);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRedux = __webpack_require__(21);
+var _reactRedux = __webpack_require__(8);
 
-var _store = __webpack_require__(79);
+var _reduxPixies = __webpack_require__(17);
+
+var _store = __webpack_require__(81);
 
 var _store2 = _interopRequireDefault(_store);
 
-var _App = __webpack_require__(97);
+var _App = __webpack_require__(89);
 
 var _App2 = _interopRequireDefault(_App);
 
+var _async = __webpack_require__(109);
+
+var _async2 = _interopRequireDefault(_async);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var store = (0, _store2.default)({});
+
+(0, _reduxPixies.attachPixie)(store, _async2.default);
 
 _reactDom2.default.render(_react2.default.createElement(
   _reactRedux.Provider,
-  { store: (0, _store2.default)({}) },
+  { store: store },
   _react2.default.createElement(_App2.default, null)
-), document.getElementById('root')); // AppConnector.jsx
+), document.getElementById('root'));
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2366,7 +3367,7 @@ module.exports={Children:{map:S.map,forEach:S.forEach,count:S.count,toArray:S.to
 
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2391,7 +3392,7 @@ var require$$0 = __webpack_require__(7);
 var emptyObject = __webpack_require__(6);
 var invariant = __webpack_require__(3);
 var emptyFunction = __webpack_require__(2);
-var checkPropTypes = __webpack_require__(9);
+var checkPropTypes = __webpack_require__(10);
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -4072,7 +5073,7 @@ module.exports = ReactEntry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4110,15 +5111,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(41);
+  module.exports = __webpack_require__(43);
 } else {
-  module.exports = __webpack_require__(44);
+  module.exports = __webpack_require__(46);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4132,7 +5133,7 @@ if (process.env.NODE_ENV === 'production') {
  LICENSE file in the root directory of this source tree.
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(1);__webpack_require__(3);var l=__webpack_require__(11),n=__webpack_require__(5),ba=__webpack_require__(16),ca=__webpack_require__(2),da=__webpack_require__(6),ea=__webpack_require__(17),fa=__webpack_require__(18),ha=__webpack_require__(19),ia=__webpack_require__(20);
+var aa=__webpack_require__(1);__webpack_require__(3);var l=__webpack_require__(12),n=__webpack_require__(5),ba=__webpack_require__(19),ca=__webpack_require__(2),da=__webpack_require__(6),ea=__webpack_require__(20),fa=__webpack_require__(21),ha=__webpack_require__(22),ia=__webpack_require__(23);
 function w(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:w("227");
 function ja(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}
 var ka={Namespaces:{html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"},getIntrinsicNamespace:ja,getChildNamespace:function(a,b){return null==a||"http://www.w3.org/1999/xhtml"===a?ja(b):"http://www.w3.org/2000/svg"===a&&"foreignObject"===b?"http://www.w3.org/1999/xhtml":a}},la=null,oa={};
@@ -4381,7 +5382,7 @@ unstable_deferredUpdates:Xj.deferredUpdates,flushSync:Xj.flushSync,__SECRET_INTE
 
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4396,7 +5397,7 @@ unstable_deferredUpdates:Xj.deferredUpdates,flushSync:Xj.flushSync,__SECRET_INTE
  * @typechecks
  */
 
-var isNode = __webpack_require__(43);
+var isNode = __webpack_require__(45);
 
 /**
  * @param {*} object The object to check.
@@ -4409,7 +5410,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4437,7 +5438,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4459,21 +5460,21 @@ if (process.env.NODE_ENV !== "production") {
 
 var react = __webpack_require__(1);
 var invariant = __webpack_require__(3);
-var ExecutionEnvironment = __webpack_require__(11);
+var ExecutionEnvironment = __webpack_require__(12);
 var _assign = __webpack_require__(5);
-var EventListener = __webpack_require__(16);
+var EventListener = __webpack_require__(19);
 var require$$0 = __webpack_require__(7);
-var hyphenateStyleName = __webpack_require__(45);
+var hyphenateStyleName = __webpack_require__(47);
 var emptyFunction = __webpack_require__(2);
-var camelizeStyleName = __webpack_require__(47);
-var performanceNow = __webpack_require__(49);
-var propTypes = __webpack_require__(12);
+var camelizeStyleName = __webpack_require__(49);
+var performanceNow = __webpack_require__(51);
+var propTypes = __webpack_require__(13);
 var emptyObject = __webpack_require__(6);
-var checkPropTypes = __webpack_require__(9);
-var shallowEqual = __webpack_require__(17);
-var containsNode = __webpack_require__(18);
-var focusNode = __webpack_require__(19);
-var getActiveElement = __webpack_require__(20);
+var checkPropTypes = __webpack_require__(10);
+var shallowEqual = __webpack_require__(20);
+var containsNode = __webpack_require__(21);
+var focusNode = __webpack_require__(22);
+var getActiveElement = __webpack_require__(23);
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -21666,7 +22667,7 @@ module.exports = ReactDOMFiberEntry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21681,7 +22682,7 @@ module.exports = ReactDOMFiberEntry;
 
 
 
-var hyphenate = __webpack_require__(46);
+var hyphenate = __webpack_require__(48);
 
 var msPattern = /^ms-/;
 
@@ -21708,7 +22709,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21744,7 +22745,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21759,7 +22760,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(48);
+var camelize = __webpack_require__(50);
 
 var msPattern = /^-ms-/;
 
@@ -21787,7 +22788,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21822,7 +22823,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21837,7 +22838,7 @@ module.exports = camelize;
  * @typechecks
  */
 
-var performance = __webpack_require__(50);
+var performance = __webpack_require__(52);
 
 var performanceNow;
 
@@ -21859,7 +22860,7 @@ if (performance.now) {
 module.exports = performanceNow;
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21874,7 +22875,7 @@ module.exports = performanceNow;
 
 
 
-var ExecutionEnvironment = __webpack_require__(11);
+var ExecutionEnvironment = __webpack_require__(12);
 
 var performance;
 
@@ -21885,7 +22886,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = performance || {};
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21903,8 +22904,8 @@ var invariant = __webpack_require__(3);
 var warning = __webpack_require__(7);
 var assign = __webpack_require__(5);
 
-var ReactPropTypesSecret = __webpack_require__(10);
-var checkPropTypes = __webpack_require__(9);
+var ReactPropTypesSecret = __webpack_require__(11);
+var checkPropTypes = __webpack_require__(10);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -22435,7 +23436,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22450,7 +23451,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 var emptyFunction = __webpack_require__(2);
 var invariant = __webpack_require__(3);
-var ReactPropTypesSecret = __webpack_require__(10);
+var ReactPropTypesSecret = __webpack_require__(11);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -22500,17 +23501,17 @@ module.exports = function() {
 
 
 /***/ }),
-/* 53 */
+/* 55 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = createProvider;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_PropTypes__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_PropTypes__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(14);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -22586,7 +23587,7 @@ function createProvider() {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 54 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22658,7 +23659,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 55 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22717,7 +23718,7 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 56 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22816,17 +23817,17 @@ var Subscription = function () {
 
 
 /***/ }),
-/* 57 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export createConnect */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(79);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -22932,7 +23933,7 @@ function createConnect() {
 /* harmony default export */ __webpack_exports__["a"] = (createConnect());
 
 /***/ }),
-/* 58 */
+/* 60 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22969,15 +23970,15 @@ function shallowEqual(objA, objB) {
 }
 
 /***/ }),
-/* 59 */
+/* 61 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export whenMapDispatchToPropsIsFunction */
 /* unused harmony export whenMapDispatchToPropsIsMissing */
 /* unused harmony export whenMapDispatchToPropsIsObject */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(31);
 
 
 
@@ -23000,13 +24001,13 @@ function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
 
 /***/ }),
-/* 60 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(66);
 
 
 
@@ -23038,11 +24039,11 @@ function baseGetTag(value) {
 
 
 /***/ }),
-/* 61 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(64);
 
 
 /** Detect free variable `self`. */
@@ -23055,7 +24056,7 @@ var root = __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__["a" /* default */] || fr
 
 
 /***/ }),
-/* 62 */
+/* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23064,14 +24065,14 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /* harmony default export */ __webpack_exports__["a"] = (freeGlobal);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(15)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(16)))
 
 /***/ }),
-/* 63 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(28);
 
 
 /** Used for built-in method references. */
@@ -23121,7 +24122,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 64 */
+/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23150,11 +24151,11 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 65 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(68);
 
 
 /** Built-in value references. */
@@ -23164,7 +24165,7 @@ var getPrototype = Object(__WEBPACK_IMPORTED_MODULE_0__overArg_js__["a" /* defau
 
 
 /***/ }),
-/* 66 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23186,7 +24187,7 @@ function overArg(func, transform) {
 
 
 /***/ }),
-/* 67 */
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23222,14 +24223,14 @@ function isObjectLike(value) {
 
 
 /***/ }),
-/* 68 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(69);
+module.exports = __webpack_require__(71);
 
 
 /***/ }),
-/* 69 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23239,7 +24240,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _ponyfill = __webpack_require__(71);
+var _ponyfill = __webpack_require__(73);
 
 var _ponyfill2 = _interopRequireDefault(_ponyfill);
 
@@ -23262,10 +24263,10 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15), __webpack_require__(70)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16), __webpack_require__(72)(module)))
 
 /***/ }),
-/* 70 */
+/* 72 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -23293,7 +24294,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 71 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23322,14 +24323,14 @@ function symbolObservablePonyfill(root) {
 };
 
 /***/ }),
-/* 72 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = combineReducers;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(29);
 
 
 
@@ -23463,7 +24464,7 @@ function combineReducers(reducers) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 73 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23517,12 +24518,12 @@ function bindActionCreators(actionCreators, dispatch) {
 }
 
 /***/ }),
-/* 74 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = applyMiddleware;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__compose__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__compose__ = __webpack_require__(30);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -23573,13 +24574,13 @@ function applyMiddleware() {
 }
 
 /***/ }),
-/* 75 */
+/* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export whenMapStateToPropsIsFunction */
 /* unused harmony export whenMapStateToPropsIsMissing */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(31);
 
 
 function whenMapStateToPropsIsFunction(mapStateToProps) {
@@ -23595,7 +24596,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
 
 /***/ }),
-/* 76 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23603,7 +24604,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* unused harmony export wrapMergePropsFunc */
 /* unused harmony export whenMergePropsIsFunction */
 /* unused harmony export whenMergePropsIsOmitted */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(32);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -23652,14 +24653,14 @@ function whenMergePropsIsOmitted(mergeProps) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 77 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* unused harmony export impureFinalPropsSelectorFactory */
 /* unused harmony export pureFinalPropsSelectorFactory */
 /* harmony export (immutable) */ __webpack_exports__["a"] = finalPropsSelectorFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(80);
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 
@@ -23765,12 +24766,12 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 78 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifySubselectors;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(14);
 
 
 function verify(selector, methodName, displayName) {
@@ -23790,46 +24791,6 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 }
 
 /***/ }),
-/* 79 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _redux = __webpack_require__(8);
-
-var _reduxLogger = __webpack_require__(80);
-
-var _reducer = __webpack_require__(81);
-
-var _reducer2 = _interopRequireDefault(_reducer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var logger = (0, _reduxLogger.createLogger)(); // store.js
-
-
-var middleware = [logger];
-
-var composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || _redux.compose;
-
-exports.default = function (initialState) {
-  return (0, _redux.createStore)(_reducer2.default, initialState, composeEnhancers(_redux.applyMiddleware.apply(undefined, middleware)));
-};
-
-/***/ }),
-/* 80 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {!function(e,t){ true?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t(e.reduxLogger=e.reduxLogger||{})}(this,function(e){"use strict";function t(e,t){e.super_=t,e.prototype=Object.create(t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}})}function r(e,t){Object.defineProperty(this,"kind",{value:e,enumerable:!0}),t&&t.length&&Object.defineProperty(this,"path",{value:t,enumerable:!0})}function n(e,t,r){n.super_.call(this,"E",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0}),Object.defineProperty(this,"rhs",{value:r,enumerable:!0})}function o(e,t){o.super_.call(this,"N",e),Object.defineProperty(this,"rhs",{value:t,enumerable:!0})}function i(e,t){i.super_.call(this,"D",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0})}function a(e,t,r){a.super_.call(this,"A",e),Object.defineProperty(this,"index",{value:t,enumerable:!0}),Object.defineProperty(this,"item",{value:r,enumerable:!0})}function f(e,t,r){var n=e.slice((r||t)+1||e.length);return e.length=t<0?e.length+t:t,e.push.apply(e,n),e}function u(e){var t="undefined"==typeof e?"undefined":N(e);return"object"!==t?t:e===Math?"math":null===e?"null":Array.isArray(e)?"array":"[object Date]"===Object.prototype.toString.call(e)?"date":"function"==typeof e.toString&&/^\/.*\//.test(e.toString())?"regexp":"object"}function l(e,t,r,c,s,d,p){s=s||[],p=p||[];var g=s.slice(0);if("undefined"!=typeof d){if(c){if("function"==typeof c&&c(g,d))return;if("object"===("undefined"==typeof c?"undefined":N(c))){if(c.prefilter&&c.prefilter(g,d))return;if(c.normalize){var h=c.normalize(g,d,e,t);h&&(e=h[0],t=h[1])}}}g.push(d)}"regexp"===u(e)&&"regexp"===u(t)&&(e=e.toString(),t=t.toString());var y="undefined"==typeof e?"undefined":N(e),v="undefined"==typeof t?"undefined":N(t),b="undefined"!==y||p&&p[p.length-1].lhs&&p[p.length-1].lhs.hasOwnProperty(d),m="undefined"!==v||p&&p[p.length-1].rhs&&p[p.length-1].rhs.hasOwnProperty(d);if(!b&&m)r(new o(g,t));else if(!m&&b)r(new i(g,e));else if(u(e)!==u(t))r(new n(g,e,t));else if("date"===u(e)&&e-t!==0)r(new n(g,e,t));else if("object"===y&&null!==e&&null!==t)if(p.filter(function(t){return t.lhs===e}).length)e!==t&&r(new n(g,e,t));else{if(p.push({lhs:e,rhs:t}),Array.isArray(e)){var w;e.length;for(w=0;w<e.length;w++)w>=t.length?r(new a(g,w,new i(void 0,e[w]))):l(e[w],t[w],r,c,g,w,p);for(;w<t.length;)r(new a(g,w,new o(void 0,t[w++])))}else{var x=Object.keys(e),S=Object.keys(t);x.forEach(function(n,o){var i=S.indexOf(n);i>=0?(l(e[n],t[n],r,c,g,n,p),S=f(S,i)):l(e[n],void 0,r,c,g,n,p)}),S.forEach(function(e){l(void 0,t[e],r,c,g,e,p)})}p.length=p.length-1}else e!==t&&("number"===y&&isNaN(e)&&isNaN(t)||r(new n(g,e,t)))}function c(e,t,r,n){return n=n||[],l(e,t,function(e){e&&n.push(e)},r),n.length?n:void 0}function s(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":s(o[r.path[n]],r.index,r.item);break;case"D":delete o[r.path[n]];break;case"E":case"N":o[r.path[n]]=r.rhs}}else switch(r.kind){case"A":s(e[t],r.index,r.item);break;case"D":e=f(e,t);break;case"E":case"N":e[t]=r.rhs}return e}function d(e,t,r){if(e&&t&&r&&r.kind){for(var n=e,o=-1,i=r.path?r.path.length-1:0;++o<i;)"undefined"==typeof n[r.path[o]]&&(n[r.path[o]]="number"==typeof r.path[o]?[]:{}),n=n[r.path[o]];switch(r.kind){case"A":s(r.path?n[r.path[o]]:n,r.index,r.item);break;case"D":delete n[r.path[o]];break;case"E":case"N":n[r.path[o]]=r.rhs}}}function p(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":p(o[r.path[n]],r.index,r.item);break;case"D":o[r.path[n]]=r.lhs;break;case"E":o[r.path[n]]=r.lhs;break;case"N":delete o[r.path[n]]}}else switch(r.kind){case"A":p(e[t],r.index,r.item);break;case"D":e[t]=r.lhs;break;case"E":e[t]=r.lhs;break;case"N":e=f(e,t)}return e}function g(e,t,r){if(e&&t&&r&&r.kind){var n,o,i=e;for(o=r.path.length-1,n=0;n<o;n++)"undefined"==typeof i[r.path[n]]&&(i[r.path[n]]={}),i=i[r.path[n]];switch(r.kind){case"A":p(i[r.path[n]],r.index,r.item);break;case"D":i[r.path[n]]=r.lhs;break;case"E":i[r.path[n]]=r.lhs;break;case"N":delete i[r.path[n]]}}}function h(e,t,r){if(e&&t){var n=function(n){r&&!r(e,t,n)||d(e,t,n)};l(e,t,n)}}function y(e){return"color: "+F[e].color+"; font-weight: bold"}function v(e){var t=e.kind,r=e.path,n=e.lhs,o=e.rhs,i=e.index,a=e.item;switch(t){case"E":return[r.join("."),n,"→",o];case"N":return[r.join("."),o];case"D":return[r.join(".")];case"A":return[r.join(".")+"["+i+"]",a];default:return[]}}function b(e,t,r,n){var o=c(e,t);try{n?r.groupCollapsed("diff"):r.group("diff")}catch(e){r.log("diff")}o?o.forEach(function(e){var t=e.kind,n=v(e);r.log.apply(r,["%c "+F[t].text,y(t)].concat(P(n)))}):r.log("—— no diff ——");try{r.groupEnd()}catch(e){r.log("—— diff end —— ")}}function m(e,t,r,n){switch("undefined"==typeof e?"undefined":N(e)){case"object":return"function"==typeof e[n]?e[n].apply(e,P(r)):e[n];case"function":return e(t);default:return e}}function w(e){var t=e.timestamp,r=e.duration;return function(e,n,o){var i=["action"];return i.push("%c"+String(e.type)),t&&i.push("%c@ "+n),r&&i.push("%c(in "+o.toFixed(2)+" ms)"),i.join(" ")}}function x(e,t){var r=t.logger,n=t.actionTransformer,o=t.titleFormatter,i=void 0===o?w(t):o,a=t.collapsed,f=t.colors,u=t.level,l=t.diff,c="undefined"==typeof t.titleFormatter;e.forEach(function(o,s){var d=o.started,p=o.startedTime,g=o.action,h=o.prevState,y=o.error,v=o.took,w=o.nextState,x=e[s+1];x&&(w=x.prevState,v=x.started-d);var S=n(g),k="function"==typeof a?a(function(){return w},g,o):a,j=D(p),E=f.title?"color: "+f.title(S)+";":"",A=["color: gray; font-weight: lighter;"];A.push(E),t.timestamp&&A.push("color: gray; font-weight: lighter;"),t.duration&&A.push("color: gray; font-weight: lighter;");var O=i(S,j,v);try{k?f.title&&c?r.groupCollapsed.apply(r,["%c "+O].concat(A)):r.groupCollapsed(O):f.title&&c?r.group.apply(r,["%c "+O].concat(A)):r.group(O)}catch(e){r.log(O)}var N=m(u,S,[h],"prevState"),P=m(u,S,[S],"action"),C=m(u,S,[y,h],"error"),F=m(u,S,[w],"nextState");if(N)if(f.prevState){var L="color: "+f.prevState(h)+"; font-weight: bold";r[N]("%c prev state",L,h)}else r[N]("prev state",h);if(P)if(f.action){var T="color: "+f.action(S)+"; font-weight: bold";r[P]("%c action    ",T,S)}else r[P]("action    ",S);if(y&&C)if(f.error){var M="color: "+f.error(y,h)+"; font-weight: bold;";r[C]("%c error     ",M,y)}else r[C]("error     ",y);if(F)if(f.nextState){var _="color: "+f.nextState(w)+"; font-weight: bold";r[F]("%c next state",_,w)}else r[F]("next state",w);l&&b(h,w,r,k);try{r.groupEnd()}catch(e){r.log("—— log end ——")}})}function S(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=Object.assign({},L,e),r=t.logger,n=t.stateTransformer,o=t.errorTransformer,i=t.predicate,a=t.logErrors,f=t.diffPredicate;if("undefined"==typeof r)return function(){return function(e){return function(t){return e(t)}}};if(e.getState&&e.dispatch)return console.error("[redux-logger] redux-logger not installed. Make sure to pass logger instance as middleware:\n// Logger with default options\nimport { logger } from 'redux-logger'\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n// Or you can create your own logger with custom options http://bit.ly/redux-logger-options\nimport createLogger from 'redux-logger'\nconst logger = createLogger({\n  // ...options\n});\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n"),function(){return function(e){return function(t){return e(t)}}};var u=[];return function(e){var r=e.getState;return function(e){return function(l){if("function"==typeof i&&!i(r,l))return e(l);var c={};u.push(c),c.started=O.now(),c.startedTime=new Date,c.prevState=n(r()),c.action=l;var s=void 0;if(a)try{s=e(l)}catch(e){c.error=o(e)}else s=e(l);c.took=O.now()-c.started,c.nextState=n(r());var d=t.diff&&"function"==typeof f?f(r,l):t.diff;if(x(u,Object.assign({},t,{diff:d})),u.length=0,c.error)throw c.error;return s}}}}var k,j,E=function(e,t){return new Array(t+1).join(e)},A=function(e,t){return E("0",t-e.toString().length)+e},D=function(e){return A(e.getHours(),2)+":"+A(e.getMinutes(),2)+":"+A(e.getSeconds(),2)+"."+A(e.getMilliseconds(),3)},O="undefined"!=typeof performance&&null!==performance&&"function"==typeof performance.now?performance:Date,N="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},P=function(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)},C=[];k="object"===("undefined"==typeof global?"undefined":N(global))&&global?global:"undefined"!=typeof window?window:{},j=k.DeepDiff,j&&C.push(function(){"undefined"!=typeof j&&k.DeepDiff===c&&(k.DeepDiff=j,j=void 0)}),t(n,r),t(o,r),t(i,r),t(a,r),Object.defineProperties(c,{diff:{value:c,enumerable:!0},observableDiff:{value:l,enumerable:!0},applyDiff:{value:h,enumerable:!0},applyChange:{value:d,enumerable:!0},revertChange:{value:g,enumerable:!0},isConflict:{value:function(){return"undefined"!=typeof j},enumerable:!0},noConflict:{value:function(){return C&&(C.forEach(function(e){e()}),C=null),c},enumerable:!0}});var F={E:{color:"#2196F3",text:"CHANGED:"},N:{color:"#4CAF50",text:"ADDED:"},D:{color:"#F44336",text:"DELETED:"},A:{color:"#2196F3",text:"ARRAY:"}},L={level:"log",logger:console,logErrors:!0,collapsed:void 0,predicate:void 0,duration:!1,timestamp:!0,stateTransformer:function(e){return e},actionTransformer:function(e){return e},errorTransformer:function(e){return e},colors:{title:function(){return"inherit"},prevState:function(){return"#9E9E9E"},action:function(){return"#03A9F4"},nextState:function(){return"#4CAF50"},error:function(){return"#F20404"}},diff:!1,diffPredicate:void 0,transformer:void 0},T=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.dispatch,r=e.getState;return"function"==typeof t||"function"==typeof r?S()({dispatch:t,getState:r}):void console.error("\n[redux-logger v3] BREAKING CHANGE\n[redux-logger v3] Since 3.0.0 redux-logger exports by default logger with default settings.\n[redux-logger v3] Change\n[redux-logger v3] import createLogger from 'redux-logger'\n[redux-logger v3] to\n[redux-logger v3] import { createLogger } from 'redux-logger'\n")};e.defaults=L,e.createLogger=S,e.logger=T,e.default=T,Object.defineProperty(e,"__esModule",{value:!0})});
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
-
-/***/ }),
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23840,33 +24801,33 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(8);
+var _redux = __webpack_require__(26);
 
-var _SithDashboard = __webpack_require__(30);
+var _reduxLogger = __webpack_require__(82);
 
-// reducer.js
-exports.default = (0, _redux.combineReducers)({
-  sithDashboard: _SithDashboard.reducer
-});
+var _reducers = __webpack_require__(9);
+
+var _reducers2 = _interopRequireDefault(_reducers);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var logger = (0, _reduxLogger.createLogger)();
+
+var middleware = [logger];
+
+var composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || _redux.compose;
+
+exports.default = function (initialState) {
+  return (0, _redux.createStore)(_reducers2.default, initialState, composeEnhancers(_redux.applyMiddleware.apply(undefined, middleware)));
+};
 
 /***/ }),
 /* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {!function(e,t){ true?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t(e.reduxLogger=e.reduxLogger||{})}(this,function(e){"use strict";function t(e,t){e.super_=t,e.prototype=Object.create(t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}})}function r(e,t){Object.defineProperty(this,"kind",{value:e,enumerable:!0}),t&&t.length&&Object.defineProperty(this,"path",{value:t,enumerable:!0})}function n(e,t,r){n.super_.call(this,"E",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0}),Object.defineProperty(this,"rhs",{value:r,enumerable:!0})}function o(e,t){o.super_.call(this,"N",e),Object.defineProperty(this,"rhs",{value:t,enumerable:!0})}function i(e,t){i.super_.call(this,"D",e),Object.defineProperty(this,"lhs",{value:t,enumerable:!0})}function a(e,t,r){a.super_.call(this,"A",e),Object.defineProperty(this,"index",{value:t,enumerable:!0}),Object.defineProperty(this,"item",{value:r,enumerable:!0})}function f(e,t,r){var n=e.slice((r||t)+1||e.length);return e.length=t<0?e.length+t:t,e.push.apply(e,n),e}function u(e){var t="undefined"==typeof e?"undefined":N(e);return"object"!==t?t:e===Math?"math":null===e?"null":Array.isArray(e)?"array":"[object Date]"===Object.prototype.toString.call(e)?"date":"function"==typeof e.toString&&/^\/.*\//.test(e.toString())?"regexp":"object"}function l(e,t,r,c,s,d,p){s=s||[],p=p||[];var g=s.slice(0);if("undefined"!=typeof d){if(c){if("function"==typeof c&&c(g,d))return;if("object"===("undefined"==typeof c?"undefined":N(c))){if(c.prefilter&&c.prefilter(g,d))return;if(c.normalize){var h=c.normalize(g,d,e,t);h&&(e=h[0],t=h[1])}}}g.push(d)}"regexp"===u(e)&&"regexp"===u(t)&&(e=e.toString(),t=t.toString());var y="undefined"==typeof e?"undefined":N(e),v="undefined"==typeof t?"undefined":N(t),b="undefined"!==y||p&&p[p.length-1].lhs&&p[p.length-1].lhs.hasOwnProperty(d),m="undefined"!==v||p&&p[p.length-1].rhs&&p[p.length-1].rhs.hasOwnProperty(d);if(!b&&m)r(new o(g,t));else if(!m&&b)r(new i(g,e));else if(u(e)!==u(t))r(new n(g,e,t));else if("date"===u(e)&&e-t!==0)r(new n(g,e,t));else if("object"===y&&null!==e&&null!==t)if(p.filter(function(t){return t.lhs===e}).length)e!==t&&r(new n(g,e,t));else{if(p.push({lhs:e,rhs:t}),Array.isArray(e)){var w;e.length;for(w=0;w<e.length;w++)w>=t.length?r(new a(g,w,new i(void 0,e[w]))):l(e[w],t[w],r,c,g,w,p);for(;w<t.length;)r(new a(g,w,new o(void 0,t[w++])))}else{var x=Object.keys(e),S=Object.keys(t);x.forEach(function(n,o){var i=S.indexOf(n);i>=0?(l(e[n],t[n],r,c,g,n,p),S=f(S,i)):l(e[n],void 0,r,c,g,n,p)}),S.forEach(function(e){l(void 0,t[e],r,c,g,e,p)})}p.length=p.length-1}else e!==t&&("number"===y&&isNaN(e)&&isNaN(t)||r(new n(g,e,t)))}function c(e,t,r,n){return n=n||[],l(e,t,function(e){e&&n.push(e)},r),n.length?n:void 0}function s(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":s(o[r.path[n]],r.index,r.item);break;case"D":delete o[r.path[n]];break;case"E":case"N":o[r.path[n]]=r.rhs}}else switch(r.kind){case"A":s(e[t],r.index,r.item);break;case"D":e=f(e,t);break;case"E":case"N":e[t]=r.rhs}return e}function d(e,t,r){if(e&&t&&r&&r.kind){for(var n=e,o=-1,i=r.path?r.path.length-1:0;++o<i;)"undefined"==typeof n[r.path[o]]&&(n[r.path[o]]="number"==typeof r.path[o]?[]:{}),n=n[r.path[o]];switch(r.kind){case"A":s(r.path?n[r.path[o]]:n,r.index,r.item);break;case"D":delete n[r.path[o]];break;case"E":case"N":n[r.path[o]]=r.rhs}}}function p(e,t,r){if(r.path&&r.path.length){var n,o=e[t],i=r.path.length-1;for(n=0;n<i;n++)o=o[r.path[n]];switch(r.kind){case"A":p(o[r.path[n]],r.index,r.item);break;case"D":o[r.path[n]]=r.lhs;break;case"E":o[r.path[n]]=r.lhs;break;case"N":delete o[r.path[n]]}}else switch(r.kind){case"A":p(e[t],r.index,r.item);break;case"D":e[t]=r.lhs;break;case"E":e[t]=r.lhs;break;case"N":e=f(e,t)}return e}function g(e,t,r){if(e&&t&&r&&r.kind){var n,o,i=e;for(o=r.path.length-1,n=0;n<o;n++)"undefined"==typeof i[r.path[n]]&&(i[r.path[n]]={}),i=i[r.path[n]];switch(r.kind){case"A":p(i[r.path[n]],r.index,r.item);break;case"D":i[r.path[n]]=r.lhs;break;case"E":i[r.path[n]]=r.lhs;break;case"N":delete i[r.path[n]]}}}function h(e,t,r){if(e&&t){var n=function(n){r&&!r(e,t,n)||d(e,t,n)};l(e,t,n)}}function y(e){return"color: "+F[e].color+"; font-weight: bold"}function v(e){var t=e.kind,r=e.path,n=e.lhs,o=e.rhs,i=e.index,a=e.item;switch(t){case"E":return[r.join("."),n,"→",o];case"N":return[r.join("."),o];case"D":return[r.join(".")];case"A":return[r.join(".")+"["+i+"]",a];default:return[]}}function b(e,t,r,n){var o=c(e,t);try{n?r.groupCollapsed("diff"):r.group("diff")}catch(e){r.log("diff")}o?o.forEach(function(e){var t=e.kind,n=v(e);r.log.apply(r,["%c "+F[t].text,y(t)].concat(P(n)))}):r.log("—— no diff ——");try{r.groupEnd()}catch(e){r.log("—— diff end —— ")}}function m(e,t,r,n){switch("undefined"==typeof e?"undefined":N(e)){case"object":return"function"==typeof e[n]?e[n].apply(e,P(r)):e[n];case"function":return e(t);default:return e}}function w(e){var t=e.timestamp,r=e.duration;return function(e,n,o){var i=["action"];return i.push("%c"+String(e.type)),t&&i.push("%c@ "+n),r&&i.push("%c(in "+o.toFixed(2)+" ms)"),i.join(" ")}}function x(e,t){var r=t.logger,n=t.actionTransformer,o=t.titleFormatter,i=void 0===o?w(t):o,a=t.collapsed,f=t.colors,u=t.level,l=t.diff,c="undefined"==typeof t.titleFormatter;e.forEach(function(o,s){var d=o.started,p=o.startedTime,g=o.action,h=o.prevState,y=o.error,v=o.took,w=o.nextState,x=e[s+1];x&&(w=x.prevState,v=x.started-d);var S=n(g),k="function"==typeof a?a(function(){return w},g,o):a,j=D(p),E=f.title?"color: "+f.title(S)+";":"",A=["color: gray; font-weight: lighter;"];A.push(E),t.timestamp&&A.push("color: gray; font-weight: lighter;"),t.duration&&A.push("color: gray; font-weight: lighter;");var O=i(S,j,v);try{k?f.title&&c?r.groupCollapsed.apply(r,["%c "+O].concat(A)):r.groupCollapsed(O):f.title&&c?r.group.apply(r,["%c "+O].concat(A)):r.group(O)}catch(e){r.log(O)}var N=m(u,S,[h],"prevState"),P=m(u,S,[S],"action"),C=m(u,S,[y,h],"error"),F=m(u,S,[w],"nextState");if(N)if(f.prevState){var L="color: "+f.prevState(h)+"; font-weight: bold";r[N]("%c prev state",L,h)}else r[N]("prev state",h);if(P)if(f.action){var T="color: "+f.action(S)+"; font-weight: bold";r[P]("%c action    ",T,S)}else r[P]("action    ",S);if(y&&C)if(f.error){var M="color: "+f.error(y,h)+"; font-weight: bold;";r[C]("%c error     ",M,y)}else r[C]("error     ",y);if(F)if(f.nextState){var _="color: "+f.nextState(w)+"; font-weight: bold";r[F]("%c next state",_,w)}else r[F]("next state",w);l&&b(h,w,r,k);try{r.groupEnd()}catch(e){r.log("—— log end ——")}})}function S(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=Object.assign({},L,e),r=t.logger,n=t.stateTransformer,o=t.errorTransformer,i=t.predicate,a=t.logErrors,f=t.diffPredicate;if("undefined"==typeof r)return function(){return function(e){return function(t){return e(t)}}};if(e.getState&&e.dispatch)return console.error("[redux-logger] redux-logger not installed. Make sure to pass logger instance as middleware:\n// Logger with default options\nimport { logger } from 'redux-logger'\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n// Or you can create your own logger with custom options http://bit.ly/redux-logger-options\nimport createLogger from 'redux-logger'\nconst logger = createLogger({\n  // ...options\n});\nconst store = createStore(\n  reducer,\n  applyMiddleware(logger)\n)\n"),function(){return function(e){return function(t){return e(t)}}};var u=[];return function(e){var r=e.getState;return function(e){return function(l){if("function"==typeof i&&!i(r,l))return e(l);var c={};u.push(c),c.started=O.now(),c.startedTime=new Date,c.prevState=n(r()),c.action=l;var s=void 0;if(a)try{s=e(l)}catch(e){c.error=o(e)}else s=e(l);c.took=O.now()-c.started,c.nextState=n(r());var d=t.diff&&"function"==typeof f?f(r,l):t.diff;if(x(u,Object.assign({},t,{diff:d})),u.length=0,c.error)throw c.error;return s}}}}var k,j,E=function(e,t){return new Array(t+1).join(e)},A=function(e,t){return E("0",t-e.toString().length)+e},D=function(e){return A(e.getHours(),2)+":"+A(e.getMinutes(),2)+":"+A(e.getSeconds(),2)+"."+A(e.getMilliseconds(),3)},O="undefined"!=typeof performance&&null!==performance&&"function"==typeof performance.now?performance:Date,N="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},P=function(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)},C=[];k="object"===("undefined"==typeof global?"undefined":N(global))&&global?global:"undefined"!=typeof window?window:{},j=k.DeepDiff,j&&C.push(function(){"undefined"!=typeof j&&k.DeepDiff===c&&(k.DeepDiff=j,j=void 0)}),t(n,r),t(o,r),t(i,r),t(a,r),Object.defineProperties(c,{diff:{value:c,enumerable:!0},observableDiff:{value:l,enumerable:!0},applyDiff:{value:h,enumerable:!0},applyChange:{value:d,enumerable:!0},revertChange:{value:g,enumerable:!0},isConflict:{value:function(){return"undefined"!=typeof j},enumerable:!0},noConflict:{value:function(){return C&&(C.forEach(function(e){e()}),C=null),c},enumerable:!0}});var F={E:{color:"#2196F3",text:"CHANGED:"},N:{color:"#4CAF50",text:"ADDED:"},D:{color:"#F44336",text:"DELETED:"},A:{color:"#2196F3",text:"ARRAY:"}},L={level:"log",logger:console,logErrors:!0,collapsed:void 0,predicate:void 0,duration:!1,timestamp:!0,stateTransformer:function(e){return e},actionTransformer:function(e){return e},errorTransformer:function(e){return e},colors:{title:function(){return"inherit"},prevState:function(){return"#9E9E9E"},action:function(){return"#03A9F4"},nextState:function(){return"#4CAF50"},error:function(){return"#F20404"}},diff:!1,diffPredicate:void 0,transformer:void 0},T=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.dispatch,r=e.getState;return"function"==typeof t||"function"==typeof r?S()({dispatch:t,getState:r}):void console.error("\n[redux-logger v3] BREAKING CHANGE\n[redux-logger v3] Since 3.0.0 redux-logger exports by default logger with default settings.\n[redux-logger v3] Change\n[redux-logger v3] import createLogger from 'redux-logger'\n[redux-logger v3] to\n[redux-logger v3] import { createLogger } from 'redux-logger'\n")};e.defaults=L,e.createLogger=S,e.logger=T,e.default=T,Object.defineProperty(e,"__esModule",{value:!0})});
 
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _redux = __webpack_require__(8);
-
-var _CurrentPlanetIndicator = __webpack_require__(32);
-
-var _ScrollableList = __webpack_require__(33);
-
-exports.default = (0, _redux.combineReducers)({ currentPlanetIndicator: _CurrentPlanetIndicator.reducer, scrollableList: _ScrollableList.reducer }); // SithDashboard/reducer.js
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16)))
 
 /***/ }),
 /* 83 */
@@ -23878,59 +24839,315 @@ exports.default = (0, _redux.combineReducers)({ currentPlanetIndicator: _Current
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+var getPlanet = exports.getPlanet = function getPlanet(state) {
+  return state.planet;
+};
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var getSiths = exports.getSiths = function getSiths(state) {
+  return state.siths;
+};
+var getList = exports.getList = function getList(state) {
+  return state.list;
+};
 
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _strings = __webpack_require__(84);
-
-var _style = __webpack_require__(85);
-
-var _style2 = _interopRequireDefault(_style);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // SithDashboard/components/CurrentPlanetIndicator/Main.jsx
-
-
-var Main = function (_Component) {
-  _inherits(Main, _Component);
-
-  function Main() {
-    _classCallCheck(this, Main);
-
-    return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
-  }
-
-  _createClass(Main, [{
-    key: 'render',
-    value: function render() {
-      var planet = this.props.planet;
-
-      var currentPlanetText = planet ? _strings.OBI_WAN_TEXT + ' ' + planet.name : undefined;
-
-      return _react2.default.createElement(
-        'h1',
-        { style: _style2.default },
-        currentPlanetText
-      );
-    }
-  }]);
-
-  return Main;
-}(_react.Component);
-
-exports.default = Main;
+exports.default = {
+  getList: getList,
+  getPlanet: getPlanet,
+  getSiths: getSiths
+};
 
 /***/ }),
 /* 84 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildReducer", function() { return buildReducer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterReducer", function() { return filterReducer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mapReducer", function() { return mapReducer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "memoizeReducer", function() { return memoizeReducer; });
+// Special property that only our wrappers will have:
+var wrapperMagic = 'redux-keto wrapper';
+
+/**
+ * Makes a collection of lazy getters for a key-value state slice.
+ * The actual wrapper object inherits from this prototype.
+ */
+function makeWrapperProto (keys, makeReducer, makeProps) {
+  var wrapperProto = Object.create(null);
+  var loop = function () {
+    var key = list[i];
+
+    var reducer = makeReducer(key);
+
+    Object.defineProperty(wrapperProto, key, {
+      configurable: true,
+      enumerable: true,
+      get: function get () {
+        var wrapper = this;
+        var stash = wrapper[wrapperMagic];
+
+        // If we are already running, this is a problem!
+        if (stash.running[key]) {
+          var e = new ReferenceError(
+            ("Reducer '" + key + "' depends on its own result")
+          );
+          e.name = 'ReduxKetoCircularReferenceError';
+          throw e
+        }
+        stash.running[key] = true;
+
+        // Evaluate the reducer:
+        try {
+          var out = reducer(
+            stash.state[key],
+            stash.action,
+            makeProps(stash.props, wrapper, key),
+            makeProps(stash.oldProps, stash.state, key)
+          );
+          if (out === undefined) {
+            throw new TypeError(("Reducer '" + key + "' returned undefined"))
+          }
+          Object.defineProperty(wrapper, key, {
+            configurable: true,
+            enumerable: true,
+            writable: false,
+            value: out
+          });
+          return out
+        } finally {
+          stash.running[key] = false;
+        }
+      }
+    });
+  };
+
+  for (var i = 0, list = keys; i < list.length; i += 1) loop();
+
+  return wrapperProto
+}
+
+/**
+ * Makes a lazy wrapper object for a key-value state slice.
+ */
+function makeWrapper (wrapperProto, state, action, props, oldProps) {
+  var wrapper = Object.create(wrapperProto);
+  Object.defineProperty(wrapper, wrapperMagic, {
+    configurable: true,
+    enumerable: false,
+    writable: false,
+    value: { state: state, action: action, props: props, oldProps: oldProps, running: {} }
+  });
+
+  return wrapper
+}
+
+/**
+ * Flattens a lazy key-value wrapper into a plain-old object
+ * with the current state as its properties.
+ */
+function flattenWrapper (state, wrapper) {
+  if ( state === void 0 ) state = {};
+
+  // If it's not a wrapper, we are done:
+  if (wrapper === null || wrapper[wrapperMagic] == null) { return wrapper }
+
+  // Diff the old and new states:
+  var keys = Object.keys(Object.getPrototypeOf(wrapper));
+  var unchanged = Object.keys(state).length === keys.length;
+  for (var i = 0, list = keys; i < list.length; i += 1) {
+    var key = list[i];
+
+    Object.defineProperty(wrapper, key, {
+      configurable: false,
+      enumerable: true,
+      writable: false,
+      value: flattenWrapper(state[key], wrapper[key])
+    });
+    if (wrapper[key] !== state[key]) {
+      unchanged = false;
+    }
+  }
+
+  // If nothing changed, just return the previous state:
+  if (unchanged) { return state }
+
+  delete wrapper[wrapperMagic];
+  return wrapper
+}
+
+function makePropsDefault (props, peers, id) {
+  return props != null ? props : peers
+}
+
+/**
+ * Combines several reducers into one.
+ */
+function buildReducer (reducerMap, makeProps) {
+  if ( makeProps === void 0 ) makeProps = makePropsDefault;
+
+  // Validate argument types:
+  if (typeof reducerMap !== 'object' || reducerMap === null) {
+    throw new TypeError('The reducer map must be an object.')
+  }
+  var keys = Object.keys(reducerMap);
+  for (var i = 0, list = keys; i < list.length; i += 1) {
+    var key = list[i];
+
+    if (typeof reducerMap[key] !== 'function') {
+      throw new TypeError('Reducers must be functions.')
+    }
+  }
+
+  // Build the wrapper:
+  var wrapperProto = makeWrapperProto(keys, function (key) { return reducerMap[key]; }, makeProps);
+
+  // Build the default state:
+  var defaultState = {};
+  for (var i$1 = 0, list$1 = keys; i$1 < list$1.length; i$1 += 1) {
+    var key$1 = list$1[i$1];
+
+    defaultState[key$1] = reducerMap[key$1].defaultState;
+  }
+
+  function builtReducer (state, action, props, oldProps) {
+    if ( state === void 0 ) state = defaultState;
+
+    var wrapper = makeWrapper(wrapperProto, state, action, props, oldProps);
+
+    // If we are the topmost fat reducer, flatten the wrappers:
+    return props == null ? flattenWrapper(state, wrapper) : wrapper
+  }
+  builtReducer.defaultState = defaultState;
+
+  return builtReducer
+}
+
+function filterActionsDefault (action, props) {
+  return action
+}
+
+function filterPropsDefault (props) {
+  return props
+}
+
+/**
+ * Filters the props and actions going into a fat reducer.
+ */
+function filterReducer (
+  reducer,
+  filterAction,
+  filterProps
+) {
+  if ( filterAction === void 0 ) filterAction = filterActionsDefault;
+  if ( filterProps === void 0 ) filterProps = filterPropsDefault;
+
+  var defaultState = reducer.defaultState;
+
+  function filteredReducer (state, action, props, oldProps) {
+    if ( state === void 0 ) state = defaultState;
+
+    var innerAction = filterAction(action, props);
+    var innerProps = filterProps(props);
+    var innerOldProps = filterProps(oldProps);
+
+    if (!innerAction) { return state }
+
+    var wrapper = reducer(state, innerAction, innerProps, innerOldProps);
+
+    // If we are the topmost fat reducer, flatten the wrappers:
+    return props == null ? flattenWrapper(state, wrapper) : wrapper
+  }
+  filteredReducer.defaultState = defaultState;
+
+  return filteredReducer
+}
+
+function makePropsDefault$1 (props, peers, id) {
+  return { peers: peers, id: id }
+}
+
+var defaultState = {};
+
+/**
+ * Applies a reducer to each item of a list.
+ * Each reducer manages its own state slice on behalf of the list item.
+ */
+function mapReducer (reducer, listIds, makeProps) {
+  if ( makeProps === void 0 ) makeProps = makePropsDefault$1;
+
+  function mapReducer (state, action, props, oldProps) {
+    if ( state === void 0 ) state = defaultState;
+
+    var ids = listIds(props);
+
+    // Try to recycle our wrapper prototype, if possible:
+    var wrapperProto =
+      state === defaultState || ids !== listIds(oldProps)
+        ? makeWrapperProto(ids, function (id) { return reducer; }, makeProps)
+        : Object.getPrototypeOf(state);
+
+    var wrapper = makeWrapper(wrapperProto, state, action, props, oldProps);
+
+    // If we are the topmost fat reducer, flatten the wrappers:
+    return props == null ? flattenWrapper(state, wrapper) : wrapper
+  }
+  mapReducer.defaultState = defaultState;
+
+  return mapReducer
+}
+
+/**
+ * Creates a memoized reducer for derived values.
+ * The first aguments are argument filters,
+ * which take the props and return an argument to pass to the derivation.
+ * The reducer will only run if some of its arguments are not equal ('===').
+ */
+function memoizeReducer () {
+  var arguments$1 = arguments;
+
+  var i = arguments.length - 1;
+  var reducer = arguments[i];
+  var filters = [];
+  while (i-- > 0) { filters[i] = arguments$1[i]; }
+
+  // Type-check the arguments:
+  if (typeof reducer !== 'function') {
+    throw new TypeError('The reducer must be a function')
+  }
+  for (var i$1 = 0, list = filters; i$1 < list.length; i$1 += 1) {
+    var filter = list[i$1];
+
+    if (typeof filter !== 'function') {
+      throw new TypeError('Each argument filter must be a function')
+    }
+  }
+
+  return function memoizedReducer (
+    state,
+    action,
+    props,
+    oldProps
+  ) {
+    if ( state === void 0 ) state = reducer.defaultState;
+
+    var clean = true;
+    var args = [];
+    for (var i = 0; i < filters.length; ++i) {
+      args[i] = filters[i](props);
+      if (clean && args[i] !== filters[i](oldProps)) { clean = false; }
+    }
+
+    return clean ? state : reducer.apply(void 0, args)
+  }
+}
+
+
+//# sourceMappingURL=redux-keto.es.js.map
+
+
+/***/ }),
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23939,10 +25156,575 @@ exports.default = Main;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var OBI_WAN_TEXT = exports.OBI_WAN_TEXT = 'Obi-Wan currently on';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var initialState = exports.initialState = null;
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments[1];
+  return action.type === 'PLANET_RECEIVED' ? _extends({}, action.planet) : state;
+};
+
+//////////////////////////////////////////////////////////////////
+
+var planets = exports.planets = [{
+  id: 8,
+  name: 'Cato Neimoidia'
+}, {
+  id: 57,
+  name: 'Dagobah'
+}, {
+  id: 10,
+  name: 'Endor'
+}, {
+  id: 14,
+  name: 'Felucia'
+}, {
+  id: 59,
+  name: 'Geonosis'
+}, {
+  id: 24,
+  name: 'Hoth'
+}, {
+  id: 36,
+  name: 'Jakku'
+}, {
+  id: 95,
+  name: 'Jestefad'
+}, {
+  id: 74,
+  name: 'Kamino'
+}, {
+  id: 92,
+  name: 'Kashyyyk'
+}, {
+  id: 13,
+  name: 'Mustafar'
+}, {
+  id: 4,
+  name: 'Saleucami'
+}, {
+  id: 32,
+  name: 'Utapau'
+}, {
+  id: 12,
+  name: 'Bespin'
+}, {
+  id: 58,
+  name: 'Coruscant'
+}, {
+  id: 19,
+  name: 'Alderaan'
+}, {
+  id: 27,
+  name: 'Korriban'
+}, {
+  id: 64,
+  name: 'Ziost'
+}, {
+  id: 62,
+  name: 'Onderon'
+}, {
+  id: 35,
+  name: 'Ryloth'
+}, {
+  id: 38,
+  name: 'Nal Hutta'
+}, {
+  id: 40,
+  name: 'Apatros'
+}, {
+  id: 11,
+  name: 'Somov Rit'
+}, {
+  id: 5,
+  name: 'Iktotch'
+}, {
+  id: 94,
+  name: 'Dromund Kaas'
+}, {
+  id: 90,
+  name: 'Clak\'dor VII'
+}, {
+  id: 83,
+  name: 'Mygeeto'
+}, {
+  id: 7,
+  name: 'Naboo'
+}, {
+  id: 18,
+  name: 'Tatooine'
+}];
 
 /***/ }),
-/* 85 */
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var initialState = exports.initialState = {};
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments[1];
+  return action.type === 'SITH_RECEIVED' ? _extends({}, state, _defineProperty({}, action.sith.id, _extends({}, action.sith, { lastUpdated: new Date() }))) : state;
+};
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initialState = undefined;
+
+var _utils = __webpack_require__(88);
+
+var BOOTSTRAP_ID = 3616;
+
+var initialState = exports.initialState = [BOOTSTRAP_ID, undefined, undefined, undefined, undefined];
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments[1];
+  var _ref = arguments[2];
+  var siths = _ref.siths;
+
+  var next = [state[0], (0, _utils.apprenticeIdOf)(state[0])(siths), (0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)(state[0])(siths))(siths), (0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)(state[0])(siths))(siths))(siths), (0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)(state[0])(siths))(siths))(siths))(siths)];
+
+  if (action.type === 'SCROLLED' && action.direction == 'UP') {
+    next = [(0, _utils.masterIdOf)((0, _utils.masterIdOf)(state[0])(siths))(siths), (0, _utils.masterIdOf)(state[0])(siths), state[0], (0, _utils.apprenticeIdOf)(state[0])(siths), (0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)(state[0])(siths))(siths)];
+  }
+
+  if (action.type === 'SCROLLED' && action.direction == 'DOWN') {
+    next = [(0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)(state[0])(siths))(siths), (0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)(state[0])(siths))(siths))(siths), (0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)(state[0])(siths))(siths))(siths))(siths), (0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)(state[0])(siths))(siths))(siths))(siths))(siths), (0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)((0, _utils.apprenticeIdOf)(state[0])(siths))(siths))(siths))(siths))(siths))(siths)];
+  }
+
+  return next.every(function (item) {
+    return typeof item === 'undefined';
+  }) ? state : next;
+};
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var apprenticeIdOf = exports.apprenticeIdOf = function apprenticeIdOf(id) {
+  return function (siths) {
+    return prop('id')(prop('apprentice')(prop(id)(siths)));
+  };
+};
+
+var masterIdOf = exports.masterIdOf = function masterIdOf(id) {
+  return function (siths) {
+    return prop('id')(prop('master')(prop(id)(siths)));
+  };
+};
+
+var prop = function prop(_prop) {
+  return function (collection) {
+    return collection ? collection[_prop] : undefined;
+  };
+};
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _connectors = __webpack_require__(33);
+
+var _SithDashboard = __webpack_require__(34);
+
+var _SithDashboard2 = _interopRequireDefault(_SithDashboard);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = function App() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(_connectors.Siths_, { render: function render(_ref) {
+        var siths = _ref.siths;
+        return _react2.default.createElement(_connectors.Planet_, { render: function render(_ref2) {
+            var planet = _ref2.planet;
+            return _react2.default.createElement(_SithDashboard2.default, { siths: siths, planet: planet });
+          } });
+      } })
+  );
+};
+
+exports.default = App;
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.mapDispatchToProps = exports.mapStateToProps = undefined;
+
+var _reactRedux = __webpack_require__(8);
+
+var _Renderer = __webpack_require__(18);
+
+var _Renderer2 = _interopRequireDefault(_Renderer);
+
+var _reducers = __webpack_require__(9);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mapStateToProps = exports.mapStateToProps = function mapStateToProps(state) {
+  return { list: _reducers.selectors.getList(state) };
+};
+
+var mapDispatchToProps = exports.mapDispatchToProps = function mapDispatchToProps() {
+  return {};
+};
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_Renderer2.default);
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.mapDispatchToProps = exports.mapStateToProps = undefined;
+
+var _reactRedux = __webpack_require__(8);
+
+var _Renderer = __webpack_require__(18);
+
+var _Renderer2 = _interopRequireDefault(_Renderer);
+
+var _reducers = __webpack_require__(9);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mapStateToProps = exports.mapStateToProps = function mapStateToProps(state) {
+  return { siths: _reducers.selectors.getSiths(state) };
+};
+
+var mapDispatchToProps = exports.mapDispatchToProps = function mapDispatchToProps() {
+  return {};
+};
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_Renderer2.default);
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.mapDispatchToProps = exports.mapStateToProps = undefined;
+
+var _reactRedux = __webpack_require__(8);
+
+var _Renderer = __webpack_require__(18);
+
+var _Renderer2 = _interopRequireDefault(_Renderer);
+
+var _reducers = __webpack_require__(9);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mapStateToProps = exports.mapStateToProps = function mapStateToProps(state) {
+  return { planet: _reducers.selectors.getPlanet(state) };
+};
+
+var mapDispatchToProps = exports.mapDispatchToProps = function mapDispatchToProps() {
+  return {};
+};
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_Renderer2.default);
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _ScrollableList = __webpack_require__(94);
+
+Object.defineProperty(exports, 'ScrollableList', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_ScrollableList).default;
+  }
+});
+
+var _List = __webpack_require__(96);
+
+Object.defineProperty(exports, 'List', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_List).default;
+  }
+});
+
+var _Item = __webpack_require__(36);
+
+Object.defineProperty(exports, 'Item', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Item).default;
+  }
+});
+
+var _Button = __webpack_require__(37);
+
+Object.defineProperty(exports, 'Button', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Button).default;
+  }
+});
+
+var _ScrollButtons = __webpack_require__(97);
+
+Object.defineProperty(exports, 'ScrollButtons', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_ScrollButtons).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ = __webpack_require__(4);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ScrollableList = function ScrollableList(_ref) {
+  var data = _ref.data,
+      render = _ref.render;
+  return _react2.default.createElement(
+    'section',
+    { className: _.classNames.scrollableList },
+    render(data)
+  );
+};
+
+exports.default = ScrollableList;
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  main: 'app-container',
+  mainInner: 'css-root',
+  planet: 'css-planet-monitor',
+  scrollableList: 'css-scrollable-list',
+  sithList: 'css-slots',
+  sith: 'css-slot',
+  scrollButtons: 'css-scroll-buttons',
+  buttonUp: 'css-button-up',
+  buttonDown: 'css-button-down'
+};
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ = __webpack_require__(4);
+
+var _Item = __webpack_require__(36);
+
+var _Item2 = _interopRequireDefault(_Item);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var List = function List(_ref) {
+  var children = _ref.children;
+  return _react2.default.createElement(
+    'ul',
+    { className: _.classNames.sithList },
+    children
+  );
+};
+
+exports.default = List;
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Button = __webpack_require__(37);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _ = __webpack_require__(4);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ScrollButtons = function ScrollButtons(_ref) {
+  var children = _ref.children;
+  return _react2.default.createElement(
+    'div',
+    { className: _.classNames.scrollButtons },
+    children
+  );
+};
+
+exports.default = ScrollButtons;
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Planet = __webpack_require__(99);
+
+var _Planet2 = _interopRequireDefault(_Planet);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Planet2.default;
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _strings = __webpack_require__(100);
+
+var _style = __webpack_require__(101);
+
+var _style2 = _interopRequireDefault(_style);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (_ref) {
+  var planet = _ref.planet;
+  return _react2.default.createElement(
+    'h1',
+    { style: _style2.default },
+    planet ? _strings.OBI_WAN_KNOWN_LOCATION_TEXT + ' ' + planet.name : _strings.OBI_WAN_UNKNOWN_LOCATION_TEXT
+  );
+};
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var OBI_WAN_KNOWN_LOCATION_TEXT = exports.OBI_WAN_KNOWN_LOCATION_TEXT = 'Obi-Wan currently on';
+var OBI_WAN_UNKNOWN_LOCATION_TEXT = exports.OBI_WAN_UNKNOWN_LOCATION_TEXT = 'Current location unknown';
+
+/***/ }),
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23965,7 +25747,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 86 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23975,18 +25757,25 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _react = __webpack_require__(1);
 
-var initialState = {}; // SithDashboard/reducer.js
+var _react2 = _interopRequireDefault(_react);
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function () {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments[1];
-  return action.type === 'PLANET_RECEIVED' ? action.planet : state;
+var Header = function Header(_ref) {
+  var children = _ref.children;
+  return _react2.default.createElement(
+    'div',
+    null,
+    children
+  );
 };
 
+exports.default = Header;
+
 /***/ }),
-/* 87 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23995,265 +25784,26 @@ exports.default = function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styles = __webpack_require__(4);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // SithDashboard/components/Siths_.jsx
-
-
-var ScrollableList = function (_Component) {
-  _inherits(ScrollableList, _Component);
-
-  function ScrollableList() {
-    _classCallCheck(this, ScrollableList);
-
-    return _possibleConstructorReturn(this, (ScrollableList.__proto__ || Object.getPrototypeOf(ScrollableList)).apply(this, arguments));
-  }
-
-  _createClass(ScrollableList, [{
-    key: 'render',
-    value: function render() {
-      var children = this.props.children;
-
-
-      return _react2.default.createElement(
-        'section',
-        { className: _styles.classNames.scrollableList },
-        children
-      );
-    }
-  }]);
-
-  return ScrollableList;
-}(_react.Component);
-
-exports.default = ScrollableList;
-
-/***/ }),
-/* 88 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Item = __webpack_require__(34);
-
-var _Item2 = _interopRequireDefault(_Item);
-
-var _styles = __webpack_require__(4);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // SithDashboard/components/List.jsx
-
-
-var List = function (_Component) {
-  _inherits(List, _Component);
-
-  function List() {
-    _classCallCheck(this, List);
-
-    return _possibleConstructorReturn(this, (List.__proto__ || Object.getPrototypeOf(List)).apply(this, arguments));
-  }
-
-  _createClass(List, [{
-    key: 'render',
-    value: function render() {
-      var children = this.props.children;
-
-
-      return _react2.default.createElement(
-        'ul',
-        { className: _styles.classNames.sithList },
-        children
-      );
-    }
-  }]);
-
-  return List;
-}(_react.Component);
-
-exports.default = List;
-
-/***/ }),
-/* 89 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Button = __webpack_require__(35);
-
-var _Button2 = _interopRequireDefault(_Button);
-
-var _styles = __webpack_require__(4);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // SithDashboard/components/ScrollButtons.jsx
-
-
-var ScrollButtons = function (_Component) {
-  _inherits(ScrollButtons, _Component);
-
-  function ScrollButtons() {
-    _classCallCheck(this, ScrollButtons);
-
-    return _possibleConstructorReturn(this, (ScrollButtons.__proto__ || Object.getPrototypeOf(ScrollButtons)).apply(this, arguments));
-  }
-
-  _createClass(ScrollButtons, [{
-    key: 'render',
-    value: function render() {
-      var children = this.props.children;
-
-
-      return _react2.default.createElement(
-        'div',
-        { className: _styles.classNames.scrollButtons },
-        children
-      );
-    }
-  }]);
-
-  return ScrollButtons;
-}(_react.Component);
-
-exports.default = ScrollButtons;
-
-/***/ }),
-/* 90 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-// SithDashboard/reducer.js
-var initialState = [undefined, undefined, undefined, undefined, undefined];
-
-exports.default = function () {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments[1];
-
-  switch (action.type) {
-    case 'SCROLLED_UP':
-      return [undefined, undefined, state[0], state[1], state[2]];
-    case 'SCROLLED_DOWN':
-      return [state[2], state[3], state[4], undefined, undefined];
-    default:
-      return state;
-  }
+var Body = function Body(_ref) {
+  var children = _ref.children;
+  return _react2.default.createElement(
+    'div',
+    null,
+    children
+  );
 };
 
-/***/ }),
-/* 91 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _ScrollableList = __webpack_require__(33);
-
-Object.defineProperty(exports, 'ScrollableList', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_ScrollableList).default;
-  }
-});
-Object.defineProperty(exports, 'List', {
-  enumerable: true,
-  get: function get() {
-    return _ScrollableList.List;
-  }
-});
-Object.defineProperty(exports, 'Item', {
-  enumerable: true,
-  get: function get() {
-    return _ScrollableList.Item;
-  }
-});
-Object.defineProperty(exports, 'ScrollButtons', {
-  enumerable: true,
-  get: function get() {
-    return _ScrollableList.ScrollButtons;
-  }
-});
-Object.defineProperty(exports, 'Button', {
-  enumerable: true,
-  get: function get() {
-    return _ScrollableList.Button;
-  }
-});
-
-var _CurrentPlanetIndicator = __webpack_require__(32);
-
-Object.defineProperty(exports, 'CurrentPlanetIndicator', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_CurrentPlanetIndicator).default;
-  }
-});
-
-var _Sith = __webpack_require__(92);
-
-Object.defineProperty(exports, 'Sith', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Sith).default;
-  }
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+exports.default = Body;
 
 /***/ }),
-/* 92 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24264,7 +25814,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Sith = undefined;
 
-var _Sith = __webpack_require__(93);
+var _Sith = __webpack_require__(105);
 
 var _Sith2 = _interopRequireDefault(_Sith);
 
@@ -24274,7 +25824,7 @@ exports.Sith = _Sith2.default;
 exports.default = _Sith2.default;
 
 /***/ }),
-/* 93 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24284,66 +25834,40 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _strings = __webpack_require__(94);
+var _strings = __webpack_require__(106);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var Sith = function Sith(_ref) {
+  var name = _ref.name,
+      homeworld = _ref.homeworld;
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+  var homeworldText = homeworld ? _strings.HOMEWORLD_TEXT + homeworld.name : undefined;
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // SithDashboard/components/Sith.jsx
-
-
-var Sith = function (_Component) {
-  _inherits(Sith, _Component);
-
-  function Sith() {
-    _classCallCheck(this, Sith);
-
-    return _possibleConstructorReturn(this, (Sith.__proto__ || Object.getPrototypeOf(Sith)).apply(this, arguments));
-  }
-
-  _createClass(Sith, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          name = _props.name,
-          homeworld = _props.homeworld;
-
-
-      var homeworldText = homeworld ? _strings.HOMEWORLD_TEXT + homeworld.name : undefined;
-
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'h3',
-          null,
-          name
-        ),
-        _react2.default.createElement(
-          'h6',
-          null,
-          homeworldText
-        )
-      );
-    }
-  }]);
-
-  return Sith;
-}(_react.Component);
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'h3',
+      null,
+      name
+    ),
+    _react2.default.createElement(
+      'h6',
+      null,
+      homeworldText
+    )
+  );
+};
 
 exports.default = Sith;
 
 /***/ }),
-/* 94 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24355,14 +25879,7 @@ Object.defineProperty(exports, "__esModule", {
 var HOMEWORLD_TEXT = exports.HOMEWORLD_TEXT = 'Homeworld: ';
 
 /***/ }),
-/* 95 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/***/ }),
-/* 96 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24371,39 +25888,52 @@ var HOMEWORLD_TEXT = exports.HOMEWORLD_TEXT = 'Homeworld: ';
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _reactRedux = __webpack_require__(21);
-
-var _SithDashboard = __webpack_require__(36);
-
-var _SithDashboard2 = _interopRequireDefault(_SithDashboard);
-
-var _selectors = __webpack_require__(31);
-
-var SELECTORS = _interopRequireWildcard(_selectors);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    planet: SELECTORS.getPlanet(state),
-    siths: SELECTORS.getSiths(state)
-  };
-}; // SithDashboard/SithDashboardConnector
-
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    dispatch: dispatch
+var prop = function prop(key) {
+  return function (object) {
+    return object ? object[key] : null;
   };
 };
 
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_SithDashboard2.default);
+var name = exports.name = prop('name');
+var homeworld = exports.homeworld = prop('homeworld');
 
 /***/ }),
-/* 97 */
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.sithsPixie = exports.sithPixie = undefined;
+
+var _reduxPixies = __webpack_require__(17);
+
+var _sithPixie = __webpack_require__(38);
+
+var _sithPixie2 = _interopRequireDefault(_sithPixie);
+
+var _sithsPixie = __webpack_require__(110);
+
+var _sithsPixie2 = _interopRequireDefault(_sithsPixie);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.sithPixie = _sithPixie2.default;
+exports.sithsPixie = _sithsPixie2.default;
+exports.default = (0, _reduxPixies.combinePixies)({ sithsPixie: _sithsPixie2.default });
+
+/***/ }),
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24413,45 +25943,29 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _reduxPixies = __webpack_require__(17);
 
-var _react = __webpack_require__(1);
+var _sithPixie = __webpack_require__(38);
 
-var _react2 = _interopRequireDefault(_react);
-
-var _SithDashboard = __webpack_require__(30);
-
-var _SithDashboard2 = _interopRequireDefault(_SithDashboard);
+var _sithPixie2 = _interopRequireDefault(_sithPixie);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var SITH_URL = 'http://localhost:3000/dark-jedis/';
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+var sithsPixie = (0, _reduxPixies.mapPixie)(_sithPixie2.default, function (props) {
+  return props.state.list.filter(function (id) {
+    return id;
+  });
+}, function (props, id) {
+  return { dispatch: props.dispatch, id: id, url: url(id) };
+});
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // App.jsx
+var url = function url(id) {
+  return '' + SITH_URL + id;
+};
 
-
-var App = function (_Component) {
-  _inherits(App, _Component);
-
-  function App() {
-    _classCallCheck(this, App);
-
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
-  }
-
-  _createClass(App, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(_SithDashboard2.default, null);
-    }
-  }]);
-
-  return App;
-}(_react.Component);
-
-exports.default = App;
+exports.default = sithsPixie;
 
 /***/ })
 /******/ ]);

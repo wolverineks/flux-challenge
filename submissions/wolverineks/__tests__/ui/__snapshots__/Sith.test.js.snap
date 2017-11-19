@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sith When has name When has planet Sith 1`] = `
+<div>
+  <h3>
+    Skere Kaan
+  </h3>
+  <h6>
+    Homeworld: Coruscant
+  </h6>
+</div>
+`;
+
+exports[`Sith When has name When lacks planet Sith 1`] = `
+<div>
+  <h3>
+    Skere Kaan
+  </h3>
+  <h6 />
+</div>
+`;
+
+exports[`Sith When lacks name When has planet Sith 1`] = `
+<div>
+  <h3 />
+  <h6>
+    Homeworld: Coruscant
+  </h6>
+</div>
+`;
+
+exports[`Sith When lacks name When lacks planet Sith 1`] = `
+<div>
+  <h3 />
+  <h6 />
+</div>
+`;

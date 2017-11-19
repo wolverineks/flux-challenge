@@ -1,15 +1,13 @@
-// App.jsx
 // @flow
 
-import React, {Component} from 'react'
+import React from 'react'
+import {Siths_, Planet_} from './state/connectors'
+import SithDashboard from './ui/SithDashboard/SithDashboard'
 
-import SithDashboard from './SithDashboard'
+const App = () => <div>
+  <Siths_  render={({siths}) =>
+    <Planet_ render={({planet}) =>
+      <SithDashboard siths={siths} planet={planet} />} />} />
+</div>
 
-type Props = {}
-type State = {}
-
-export default class App extends Component<Props, State> {
-  render () {
-    return <SithDashboard />
-  }
-}
+export default App

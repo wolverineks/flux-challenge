@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List When has contents List 1`] = `
+<ul
+  className="css-slots"
+>
+  <li
+    className="css-slot"
+  >
+    <div>
+      test
+    </div>
+  </li>
+</ul>
+`;
