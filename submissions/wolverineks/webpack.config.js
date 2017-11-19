@@ -13,9 +13,12 @@ module.exports = {
     path: path.resolve('dist'),
     filename: 'bundle.js'
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json']
+  },
   module: {
     loaders: [{
-      test: /\.js(x)$/, // Match both .js and .jsx files
+      test: /\.jsx?$/, // Match both .js and .jsx files
       exclude: /node_modules/,
       loader: 'babel-loader',
       query: {

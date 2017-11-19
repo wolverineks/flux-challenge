@@ -6,10 +6,12 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
-    "lint": "eslint --fix ./src --ext='jsx' --ext='js'",
+    "lint": "eslint --fix ./src --ext .jsx .js",
     "flow": "flow",
-    "test": "yarn lint && yarn flow",
+    "jest": "jest",
+    "test": "yarn lint && yarn flow && yarn jest",
     "precommit": "yarn test",
+    "watch": "yarn build -- --watch",
     "build": "webpack"
   },
   "dependencies": {
@@ -41,7 +43,10 @@
     "flow-bin": "^0.56.0",
     "html-webpack-plugin": "^2.30.1",
     "husky": "^0.14.3",
+    "jest": "^21.2.1",
     "path": "^0.12.7",
+    "react-test-renderer": "^16.0.0",
+    "redux-logger": "^3.0.6",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
   }

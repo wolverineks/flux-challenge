@@ -1,6 +1,6 @@
-export {default as CurrentPlanetIndicator} from './CurrentPlanetIndicator.jsx'
-export {default as Siths} from './Siths.jsx'
-export {default as SithList} from './SithList.jsx'
-export {default as Sith} from './Sith.jsx'
-export {default as Button} from './Button.jsx'
-export {default as ScrollButtons} from './ScrollButtons.jsx'
+// SithDashboard/components/index.js
+// @flow
+
+export {default as ScrollableList, List, Item, ScrollButtons, Button} from './ScrollableList'
+export {default as CurrentPlanetIndicator} from './CurrentPlanetIndicator'
+export {default as Sith} from './Sith'
