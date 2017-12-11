@@ -72,7 +72,7 @@ BRF:3
 BRH:3
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/SithDashboard.jsx
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/Dashboard.jsx
 FNF:0
 FNH:0
 LF:0
@@ -81,7 +81,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/index.js
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/index.js
 FNF:0
 FNH:0
 LF:0
@@ -90,7 +90,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/styles.js
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/styles.js
 FNF:0
 FNH:0
 DA:4,4
@@ -100,7 +100,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/Body.jsx
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/Body.jsx
 FN:5,(anonymous_0)
 FNF:1
 FNH:0
@@ -113,7 +113,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/Header.jsx
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/Header.jsx
 FN:5,(anonymous_0)
 FNF:1
 FNH:0
@@ -126,7 +126,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/index.js
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/index.js
 FNF:0
 FNH:0
 LF:0
@@ -135,7 +135,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/PlanetIndicator/PlanetIndicator.jsx
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/PlanetIndicator/PlanetIndicator.jsx
 FN:10,(anonymous_0)
 FNF:1
 FNH:1
@@ -150,7 +150,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/PlanetIndicator/index.js
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/PlanetIndicator/index.js
 FNF:0
 FNH:0
 LF:0
@@ -159,7 +159,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/PlanetIndicator/strings.js
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/PlanetIndicator/strings.js
 FNF:0
 FNH:0
 DA:3,2
@@ -170,7 +170,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/PlanetIndicator/style.js
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/PlanetIndicator/style.js
 FNF:0
 FNH:0
 LF:0
@@ -179,7 +179,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/ScrollableList/ScrollableList.jsx
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/ScrollableList/ScrollableList.jsx
 FN:8,(anonymous_0)
 FNF:1
 FNH:0
@@ -191,7 +191,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/ScrollableList/index.js
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/ScrollableList/index.js
 FNF:0
 FNH:0
 LF:0
@@ -200,7 +200,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/ScrollableList/components/Button.jsx
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/ScrollableList/components/Button.jsx
 FN:8,(anonymous_0)
 FNF:1
 FNH:1
@@ -216,7 +216,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/ScrollableList/components/Item.jsx
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/ScrollableList/components/Item.jsx
 FN:8,(anonymous_0)
 FNF:1
 FNH:1
@@ -229,7 +229,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/ScrollableList/components/List.jsx
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/ScrollableList/components/List.jsx
 FN:9,(anonymous_0)
 FNF:1
 FNH:1
@@ -242,7 +242,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/ScrollableList/components/ScrollButtons.jsx
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/ScrollableList/components/ScrollButtons.jsx
 FN:9,(anonymous_0)
 FNF:1
 FNH:1
@@ -255,7 +255,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/Sith/Sith.jsx
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/Sith/Sith.jsx
 FN:9,(anonymous_0)
 FNF:1
 FNH:1
@@ -271,7 +271,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/Sith/index.js
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/Sith/index.js
 FNF:0
 FNH:0
 LF:0
@@ -280,7 +280,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/SithDashboard/components/Sith/strings.js
+SF:/Users/kevinsullivan/Desktop/projects/flux-challenge/submissions/wolverineks/src/ui/Dashboard/components/Sith/strings.js
 FNF:0
 FNH:0
 DA:3,2

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Planet When has planet Planet 1`] = `
+exports[`PlanetIndicator When has planet PlanetIndicator 1`] = `
 <h1
   style={
     Object {
@@ -20,7 +20,7 @@ exports[`Planet When has planet Planet 1`] = `
 </h1>
 `;
 
-exports[`Planet When lacks planet Planet 1`] = `
+exports[`PlanetIndicator When lacks planet PlanetIndicator 1`] = `
 <h1
   style={
     Object {

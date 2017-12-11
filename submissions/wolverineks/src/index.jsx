@@ -5,11 +5,12 @@ import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 import {attachPixie} from 'redux-pixies'
 
+import type {Store} from './state/types'
 import createStore from './state/store'
 import App from './App.jsx'
 import appPixie from './async'
 
-const store = createStore({})
+const store: Store = createStore()
 
 attachPixie(store, appPixie)
 

@@ -1,8 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button When up button Button 1`] = `
+exports[`Button When DOWN button Button 1`] = `
 <button
   className="css-button-down"
-  onPress={undefined}
+  onClick={[Function]}
+/>
+`;
+
+exports[`Button When UP button Button 1`] = `
+<button
+  className="css-button-up"
+  onClick={[Function]}
 />
 `;

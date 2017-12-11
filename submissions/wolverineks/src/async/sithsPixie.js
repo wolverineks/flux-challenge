@@ -1,17 +1,48 @@
+// // @flow
+//
+// import {mapPixie} from 'redux-pixies'
+//
+// import type {Id, Dispatch, ServerSith} from '../state/types'
+//
+// import sithPixie from './sithPixie'
+// import sithActions from '../state/actions/siths'
+//
+// const sithsPixie = mapPixie(
+//   sithPixie,
+//   ({state: {list: {diff} } }) => diff,
+//   ({dispatch}, id) => ({update: fetchSith(dispatch, +id), dispatch, id: +id}),
+// )
+//
+// export default sithsPixie
+//
+// const SITH_URL = 'http://localhost:3000/dark-jedis/'
+// const fetchSith = (dispatch: Dispatch, id: Id) => () =>
+//   fetch(`${SITH_URL}${id}`)
+//     .then((response) => response.json())
+//     .then((sith: ServerSith) => { dispatch(sithActions.sithReceived(sith)) })
+//     .catch((error: Error) => { dispatch(sithActions.sithRequestErrored(id, error)) })
+
+/////////////////////////////////////////////////////////////////
 // @flow
 
 import {mapPixie} from 'redux-pixies'
 
-import sithPixie from './sithPixie'
+import type {Id, Dispatch, ServerSith} from '../state/types'
 
-const SITH_URL = 'http://localhost:3000/dark-jedis/'
+import sithPixie from './sithPixie'
+import sithActions from '../state/actions/siths'
 
 const sithsPixie = mapPixie(
   sithPixie,
-  (props) => props.state.list.filter((id) => id),
-  (props, id) => ({dispatch: props.dispatch, id, url: url(id)})
+  ({state: {list: {added} } }) => added,
+  ({dispatch}, id) => ({dispatch, id: +id}),
 )
 
-const url = (id) => `${SITH_URL}${id}`
-
 export default sithsPixie
+
+const SITH_URL = 'http://localhost:3000/dark-jedis/'
+const fetchSith = (dispatch: Dispatch, id: Id) => () =>
+  fetch(`${SITH_URL}${id}`)
+    .then((response) => response.json())
+    .then((sith: ServerSith) => { dispatch(sithActions.sithReceived(sith)) })
+    .catch((error: Error) => { dispatch(sithActions.sithRequestErrored(id, error)) })

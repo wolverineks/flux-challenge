@@ -2,7 +2,7 @@
 
 import React from 'react'
 import renderer from 'react-test-renderer'
-import {Item, classNames} from '../../src/ui/SithDashboard'
+import {Item, classNames} from '../../src/ui'
 
 describe('Item', () => {
   describe('When has contents', () => {

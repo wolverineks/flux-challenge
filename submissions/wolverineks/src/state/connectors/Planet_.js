@@ -2,15 +2,19 @@
 
 import {connect} from 'react-redux'
 
-import Renderer from './Renderer'
+import Render from './Render'
 import {selectors as SELECTORS} from '../reducers'
 import type {State as AllState, Planet} from '../types'
+import planetActions from '../actions/planet'
 
-export type State = {planet: Planet | null}
-export const mapStateToProps = (state: AllState): State => ({planet: SELECTORS.getPlanet(state)})
+export type StateProps = {planet: Planet | null}
+export const mapStateToProps = (state: AllState): StateProps => ({planet: SELECTORS.getPlanet(state)})
 
-export type Dispatch = {}
-export const mapDispatchToProps = (): Dispatch => ({})
+export type DispatchProps = {planetReceived: (planet: Planet) => void}
+export const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  planetReceived: (planet) => { dispatch(planetActions.planetReceived(planet)) },
+  dispatch
+})
 
-export type Connector = State & Dispatch
-export default connect(mapStateToProps, mapDispatchToProps)(Renderer)
+export type Connector = StateProps & DispatchProps
+export default connect(mapStateToProps, mapDispatchToProps)(Render)

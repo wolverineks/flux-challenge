@@ -6,11 +6,11 @@ exports[`ScrollButtons When has buttons ScrollButtons 1`] = `
 >
   <button
     className="css-button-up"
-    onPress={undefined}
+    onClick={[Function]}
   />
   <button
     className="css-button-down"
-    onPress={undefined}
+    onClick={[Function]}
   />
 </div>
 `;

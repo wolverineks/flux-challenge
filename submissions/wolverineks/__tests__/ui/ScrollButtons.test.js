@@ -2,15 +2,15 @@
 
 import React from 'react'
 import renderer from 'react-test-renderer'
-import {ScrollButtons, Button, classNames} from '../../src/ui/SithDashboard'
+import {ScrollButtons, ScrollButton, classNames} from '../../src/ui/'
 
 describe('ScrollButtons', () => {
   describe('When has buttons', () => {
     test('ScrollButtons', () => {
       const className = classNames.scrollButtons
       const component = renderer.create(<ScrollButtons className={className}>
-        <Button direction={'UP'} />
-        <Button direction={'DOWN'} />
+        <ScrollButton direction={'UP'} onClick={() => {}} />
+        <ScrollButton direction={'DOWN'} onClick={() => {}} />
       </ScrollButtons>)
       const tree = component.toJSON()
       expect(tree).toMatchSnapshot()

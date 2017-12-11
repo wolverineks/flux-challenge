@@ -17,6 +17,9 @@ exports[`Sith When has name When lacks planet Sith 1`] = `
     Skere Kaan
   </h3>
   <h6 />
+  <h6>
+    9 days ago
+  </h6>
 </div>
 `;
 
@@ -33,5 +36,8 @@ exports[`Sith When lacks name When lacks planet Sith 1`] = `
 <div>
   <h3 />
   <h6 />
+  <h6>
+    a few seconds ago
+  </h6>
 </div>
 `;

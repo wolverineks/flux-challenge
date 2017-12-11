@@ -2,7 +2,7 @@
 
 import React from 'react'
 import renderer from 'react-test-renderer'
-import {Sith, classNames} from '../../src/ui/SithDashboard/'
+import {Sith, classNames} from '../../src/ui/'
 
 describe('Sith', () => {
   describe('When has name', () => {

@@ -1,13 +1,18 @@
 // @flow
 
-// import {combineReducers} from 'redux'
 import {buildReducer} from 'redux-keto'
 
-import planet from './planet'
 import siths from './siths'
-import list from './list'
+import planet from './planet'
+import list from './list/list'
+import selectors from './selectors'
 
-export {default as selectors} from './selectors'
-
-export default buildReducer({planet, siths, list})
-// export default combineReducers({planet, siths, list})
+const reducer = buildReducer({siths, planet, list})
+export type Reducer = typeof reducer
+export {
+  siths,
+  planet,
+  selectors,
+  list,
+}
+export default reducer

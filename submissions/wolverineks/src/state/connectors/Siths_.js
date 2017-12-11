@@ -2,15 +2,15 @@
 
 import {connect} from 'react-redux'
 
-import Renderer from './Renderer'
+import Render from './Render'
 import {selectors as SELECTORS} from '../reducers'
 import type {State as AllState, Siths} from '../types'
 
-export type StateProps = {siths: Siths}
-export const mapStateToProps = (state: AllState): StateProps => ({siths: SELECTORS.getSiths(state)})
+export type State = {siths: Siths}
+export const mapStateToProps = (state: AllState): State => ({siths: SELECTORS.getSiths(state)})
 
-export type DispatchProps = {}
-export const mapDispatchToProps = (): DispatchProps => ({})
+export type Dispatch = {}
+export const mapDispatchToProps = (): Dispatch => ({})
 
-export type Connector = StateProps & DispatchProps
-export default connect(mapStateToProps, mapDispatchToProps)(Renderer)
+export type Connector = State & Dispatch
+export default connect(mapStateToProps, mapDispatchToProps)(Render)
