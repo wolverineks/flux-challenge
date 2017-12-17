@@ -13,3 +13,17 @@ exports[`Button When UP button Button 1`] = `
   onClick={[Function]}
 />
 `;
+
+exports[`ScrollButton When DOWN button ScrollButton 1`] = `
+<button
+  className="css-button-down"
+  onClick={[Function]}
+/>
+`;
+
+exports[`ScrollButton When UP button ScrollButton 1`] = `
+<button
+  className="css-button-up"
+  onClick={[Function]}
+/>
+`;

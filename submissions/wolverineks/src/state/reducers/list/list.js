@@ -1,6 +1,6 @@
 // @flow
 
-import {difference, isNil} from 'ramda'
+import {difference, isNil, reject} from 'ramda'
 
 import type {State as AllState, Action} from '../../types'
 import {apprenticeIdOf, masterIdOf} from '../utils'
@@ -18,7 +18,7 @@ export const initialState = {
 }
 export default (state: State = initialState, action: Action, {siths}: AllState) => {
   let rootId = state.values[0]
-  let nextValues = state.values
+  let values = state.values
 
   if (action.type === 'SITH_RECEIVED') {
     const index0 = rootId
@@ -27,7 +27,7 @@ export default (state: State = initialState, action: Action, {siths}: AllState) 
     const index3 = apprenticeIdOf(index2)(siths)
     const index4 = apprenticeIdOf(index3)(siths)
 
-    nextValues = [ index0, index1, index2, index3, index4]
+    values = [ index0, index1, index2, index3, index4]
   }
 
   if (action.type === 'SCROLLED' && action.direction == 'UP') {
@@ -37,7 +37,7 @@ export default (state: State = initialState, action: Action, {siths}: AllState) 
     const index3 = apprenticeIdOf(index2)(siths)
     const index4 = apprenticeIdOf(index3)(siths)
 
-    nextValues = [ index0, index1, index2, index3, index4,]
+    values = [ index0, index1, index2, index3, index4,]
   }
 
   if (action.type === 'SCROLLED' && action.direction == 'DOWN') {
@@ -47,16 +47,12 @@ export default (state: State = initialState, action: Action, {siths}: AllState) 
     const index3 = apprenticeIdOf(index2)(siths)
     const index4 = apprenticeIdOf(index3)(siths)
 
-    nextValues = [ index0, index1, index2, index3, index4 ]
+    values = [ index0, index1, index2, index3, index4 ]
   }
 
-  const added = difference(nextValues, state.values)
-  const removed = difference(state.values, nextValues)
-  return isValid(nextValues) ? {
-    values: nextValues,
-    added,
-    removed
-  } : state
+  const added = reject(isNil, difference(values, state.values))
+  const removed = reject(isNil, difference(state.values, values))
+  return isValid(values) ? {values, added, removed} : state
 }
 
 const isValid = (values: Array<number | null>): boolean => !isNil(values[0])

@@ -4,7 +4,7 @@ import React from 'react'
 import Websocket from 'react-websocket'
 import {compose} from 'ramda'
 
-import {Siths_, Planet_, List_} from './state/connectors'
+import {Siths_, Planet_, List_, Ids_} from './state/connectors'
 import Layout, {Sith, Header, Body, PlanetIndicator, ScrollableList, List, Item, ScrollButtons, ScrollButton} from './ui/'
 
 import {name, homeworld} from './ui/utils'
@@ -24,10 +24,10 @@ const App = () => <Layout>
     </Header>
 
     <Body>
-      <Siths_>{({siths}) =>
-        <List_>{({list, scrolled}) =>
-          <ScrollableList>
+      <Siths_>{({siths, ids}) =>
 
+        <List_>{(startOfList, endOfList) =>
+          <ScrollableList>{(startOfList, endOfList) => <div>
             <List>
               <Item><Sith name={name(siths[list[0]]) || ''} homeworld={homeworld(siths[list[0]]) || {}} /></Item>
               <Item><Sith name={name(siths[list[1]]) || ''} homeworld={homeworld(siths[list[1]]) || {}} /></Item>
@@ -37,12 +37,12 @@ const App = () => <Layout>
             </List>
 
             <ScrollButtons>
-              <ScrollButton direction={'UP'} onClick={scrolled} />
-              <ScrollButton direction={'DOWN'} onClick={scrolled} />
+              <ScrollButton direction={'UP'} onClick={scrolled} disabled={startOfList} />
+              <ScrollButton direction={'DOWN'} onClick={scrolled} disabled={endOfList} />
             </ScrollButtons>
+          </div>}</ScrollableList>
+        }</List_>
 
-          </ScrollableList>}
-        </List_>
       }</Siths_>
     </Body>
 

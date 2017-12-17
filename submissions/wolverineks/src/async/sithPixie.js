@@ -1,3 +1,23 @@
+// @flow
+
+import * as API from './API'
+import sithActions from '../state/actions/siths'
+
+import type {Id, Dispatch, ServerSith} from '../state/types'
+type PixieProps = {id: Id, dispatch: Dispatch}
+
+const sithPixie = () => ({
+  update ({dispatch, id}: PixieProps) {
+    dispatch({type: 'SITH_REQUESTED', id})
+    return API.fetchSith(id)
+      .then((sith: ServerSith) => dispatch(sithActions.sithReceived(sith)))
+      .catch((error: Error) => dispatch(sithActions.sithRequestErrored(id, error)))
+  },
+  destroy () {}
+})
+
+export default sithPixie
+
 // //////////////////////////////////////////////////////
 // // @flow
 //
@@ -45,28 +65,3 @@
 // export default sithPixie
 
 // //////////////////////////////////////////////////
-// @flow
-
-import type {Id, Dispatch, ServerSith} from '../state/types'
-import sithActions from '../state/actions/siths'
-
-type PixieProps = {id: Id, dispatch: Dispatch}
-
-const SITH_URL = 'http://localhost:3000/dark-jedis/'
-const sithPixie = () => ({
-  update ({dispatch, id}: PixieProps) {
-    dispatch({type: 'SITH_REQUESTED', id})
-
-    fetch(`${SITH_URL}${id}`)
-      .then((response) => response.json())
-      .then((sith: ServerSith) => dispatch(sithActions.sithReceived(sith)))
-  },
-  destroy (destroyProps) {
-    console.log(destroyProps)
-    console.log(`destroy: ${id}`)
-  }
-})
-
-
-
-export default sithPixie

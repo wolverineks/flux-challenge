@@ -2,24 +2,19 @@
 
 import type {Store as ReduxStore, Dispatch as ReduxDispatch} from 'redux'
 import type {ChildrenArray, Element} from 'react'
-import type {
-  PixieInstance as Pixie,
-  PixieInput as Input,
-  OnError,
-  OnOutput,
-  UpdateFunction as Update,
-  DestroyFunction as Destroy,
-} from 'redux-pixies'
+import type {PixieInstance, TamePixieInput as Input, OnError, OnOutput, UpdateFunction as Update, DestroyFunction as Destroy,} from 'redux-pixies'
 
 import type {Reducer as RootReducer} from './reducers'
 
 // Server types
+type ServerSiths  = {[id: Id]: ServerSith}
 type ServerSith   = {id: Id, name: string, homeworld: Planet, master: Master | null, apprentice: Apprentice | null, lastUpdated?: Date}
 type Master       = {id: Id, url: string}
 type Apprentice   = {id: Id, url: string}
 
 // Domain types
-type Siths       = {[sithId: number]: Sith}
+type CacheSiths  = {[Id: Id]: Sith}
+type Siths       = {[Id: Id]: Sith}
 type Sith        = {id: Id, name: string, homeworld: Planet, masterId: number | null, apprenticeId: number | null, lastUpdated: Date}
 type Planet      = {id: Id, name: string}
 type Id          = number
@@ -53,10 +48,15 @@ type Reducer<S> = (state: S, action: Action) => S
 type Children  = ChildrenArray<Element<*>>
 type ClassName = string
 
+// Async types
+type SithPixie = PixieInstance<State>
+
 export type {
+  ServerSiths,
   ServerSith,
   Master,
   Apprentice,
+  CacheSiths,
   Siths,
   Sith,
   Planet,
@@ -76,7 +76,8 @@ export type {
   Reducer,
   Children,
   ClassName,
-  Pixie,
+  SithPixie,
+  PixieInstance,
   Input,
   OnError,
   OnOutput,

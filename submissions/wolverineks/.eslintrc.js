@@ -23,6 +23,7 @@ module.exports = {
     "flowtype"
   ],
   "rules": {
+    "no-debugger": 0,
     "react/jsx-no-duplicate-props": ["error", {"ignoreCase": true}],
     "react/jsx-indent-props": ["error", 2],
     "react/self-closing-comp": ["error", {"component": true}],
