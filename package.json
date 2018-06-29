@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "global": "^4.3.2",
+    "import-sort-cli": "^5.0.0",
     "moment": "^2.19.2",
     "ramda": "^0.25.0",
     "react": "^16.0.0",
@@ -51,10 +52,14 @@
     "flow-bin": "^0.56.0",
     "html-webpack-plugin": "^2.30.1",
     "husky": "^0.14.3",
+    "import-sort-parser-babylon": "^5.0.0",
+    "import-sort-style-module": "^5.0.0",
     "jest": "^21.2.1",
     "path": "^0.12.7",
+    "prettier-eslint-cli": "^4.7.1",
     "react-test-renderer": "^16.0.0",
     "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.3",
     "sinon": "^4.1.2",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
@@ -64,5 +69,11 @@
       "<rootDir>/__tests__/shim.js",
       "<rootDir>/__tests__/setup.js"
     ]
+  },
+  "importSort": {
+    ".js, .es": {
+      "parser": "babylon",
+      "style": "module"
+    }
   }
 }
