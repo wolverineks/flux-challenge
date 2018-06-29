@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScrollButton When DOWN button ScrollButton 1`] = `
+<button
+  className="css-button-down"
+  onClick={[Function]}
+/>
+`;
+
+exports[`ScrollButton When UP button ScrollButton 1`] = `
+<button
+  className="css-button-up"
+  onClick={[Function]}
+/>
+`;

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sith When not on homeworld Sith 1`] = `
+<div
+  style={null}
+>
+  <h3>
+    Skere Kaan
+  </h3>
+  <h6>
+    Homeworld: Coruscant
+  </h6>
+  <h6>
+    a month ago
+  </h6>
+</div>
+`;
+
+exports[`Sith When on homeworld Sith 1`] = `
+<div
+  style={
+    Object {
+      "color": "red",
+    }
+  }
+>
+  <h3>
+    Skere Kaan
+  </h3>
+  <h6>
+    Homeworld: Coruscant
+  </h6>
+  <h6>
+    a month ago
+  </h6>
+</div>
+`;

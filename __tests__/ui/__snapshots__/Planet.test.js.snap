@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlanetIndicator When has planet PlanetIndicator 1`] = `
+<h1
+  style={
+    Object {
+      "backgroundColor": "#2F5093",
+      "border": "5px solid #87AFE7",
+      "borderRadius": "2px",
+      "boxShadow": "0px 0px 10px 1px rgba(135,175,231,0.5)",
+      "color": "#EDE66A",
+      "inset": "0px 0px 10px 1px rgba(135,175,231,0.5)",
+      "marginTop": 0,
+      "padding": "16px",
+      "textShadow": "0px 0px 10px rgba(237, 230, 106, 0.6)",
+    }
+  }
+>
+  Obi-Wan currently on Tatooine
+</h1>
+`;
+
+exports[`PlanetIndicator When lacks planet PlanetIndicator 1`] = `
+<h1
+  style={
+    Object {
+      "backgroundColor": "#2F5093",
+      "border": "5px solid #87AFE7",
+      "borderRadius": "2px",
+      "boxShadow": "0px 0px 10px 1px rgba(135,175,231,0.5)",
+      "color": "#EDE66A",
+      "inset": "0px 0px 10px 1px rgba(135,175,231,0.5)",
+      "marginTop": 0,
+      "padding": "16px",
+      "textShadow": "0px 0px 10px rgba(237, 230, 106, 0.6)",
+    }
+  }
+>
+  Current location unknown
+</h1>
+`;
